@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B085B2372AF4E850000B3CBE /* WebView.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = B085B2342AF4E850000B3CBE /* WebView.framework.dSYM */; };
-		B085B2392AF4E868000B3CBE /* WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2352AF4E850000B3CBE /* WebView.framework */; };
-		B085B23A2AF4E868000B3CBE /* WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2352AF4E850000B3CBE /* WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B085B23B2AF4E86A000B3CBE /* Pods_WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2332AF4E850000B3CBE /* Pods_WebView.framework */; };
-		B085B23C2AF4E86A000B3CBE /* Pods_WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2332AF4E850000B3CBE /* Pods_WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B085B24C2AF4F24D000B3CBE /* WebView.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */; };
+		B085B24E2AF4F250000B3CBE /* Pods_WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */; };
+		B085B24F2AF4F250000B3CBE /* Pods_WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B085B2502AF4F251000B3CBE /* WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B24A2AF4F24D000B3CBE /* WebView.framework */; };
+		B085B2512AF4F251000B3CBE /* WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B24A2AF4F24D000B3CBE /* WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0E7F0152AF2B612001ACA3E /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */; };
 		B0E7F0172AF2B612001ACA3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0162AF2B612001ACA3E /* ContentView.swift */; };
 		B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E7F0182AF2B613001ACA3E /* Assets.xcassets */; };
@@ -68,8 +68,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B085B23C2AF4E86A000B3CBE /* Pods_WebView.framework in Embed Frameworks */,
-				B085B23A2AF4E868000B3CBE /* WebView.framework in Embed Frameworks */,
+				B085B2512AF4F251000B3CBE /* WebView.framework in Embed Frameworks */,
+				B085B24F2AF4F250000B3CBE /* Pods_WebView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,10 +85,10 @@
 		B085B22F2AF4E7FA000B3CBE /* sampleSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B2302AF4E7FA000B3CBE /* sampleSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B2312AF4E7FA000B3CBE /* sampleSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B085B2332AF4E850000B3CBE /* Pods_WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_WebView.framework; sourceTree = "<group>"; };
-		B085B2342AF4E850000B3CBE /* WebView.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = WebView.framework.dSYM; sourceTree = "<group>"; };
-		B085B2352AF4E850000B3CBE /* WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebView.framework; sourceTree = "<group>"; };
 		B085B23D2AF4E876000B3CBE /* Pods_sampleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_sampleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_WebView.framework; sourceTree = "<group>"; };
+		B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = WebView.framework.dSYM; sourceTree = "<group>"; };
+		B085B24A2AF4F24D000B3CBE /* WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebView.framework; sourceTree = "<group>"; };
 		B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleSDKApp.swift; sourceTree = "<group>"; };
 		B0E7F0162AF2B612001ACA3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0E7F0182AF2B613001ACA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B085B23B2AF4E86A000B3CBE /* Pods_WebView.framework in Frameworks */,
-				B085B2392AF4E868000B3CBE /* WebView.framework in Frameworks */,
+				B085B2502AF4F251000B3CBE /* WebView.framework in Frameworks */,
+				B085B24E2AF4F250000B3CBE /* Pods_WebView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,12 +144,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B085B2322AF4E850000B3CBE /* Release-iphonesimulator */ = {
+		B085B2472AF4F24D000B3CBE /* Release-iphonesimulator */ = {
 			isa = PBXGroup;
 			children = (
-				B085B2332AF4E850000B3CBE /* Pods_WebView.framework */,
-				B085B2342AF4E850000B3CBE /* WebView.framework.dSYM */,
-				B085B2352AF4E850000B3CBE /* WebView.framework */,
+				B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */,
+				B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */,
+				B085B24A2AF4F24D000B3CBE /* WebView.framework */,
 			);
 			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
@@ -208,8 +208,8 @@
 		BFD886A490F18AE8494F6DEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B085B2472AF4F24D000B3CBE /* Release-iphonesimulator */,
 				B085B23D2AF4E876000B3CBE /* Pods_sampleSDK.framework */,
-				B085B2322AF4E850000B3CBE /* Release-iphonesimulator */,
 				EC8FCE7C141E9B033E4E68FB /* Pods_sampleSDK_sampleSDKUITests.framework */,
 				9804D1A18ABD26842ABF210F /* Pods_sampleSDKTests.framework */,
 			);
@@ -328,7 +328,7 @@
 			files = (
 				B0E7F01C2AF2B613001ACA3E /* Preview Assets.xcassets in Resources */,
 				B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */,
-				B085B2372AF4E850000B3CBE /* WebView.framework.dSYM in Resources */,
+				B085B24C2AF4F24D000B3CBE /* WebView.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +679,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Release-iphoneos",
+					"$(PROJECT_DIR)/Release-iphonesimulator",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -703,6 +704,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Release-iphoneos",
+					"$(PROJECT_DIR)/Release-iphonesimulator",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
