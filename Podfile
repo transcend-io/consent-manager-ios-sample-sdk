@@ -16,8 +16,8 @@ target 'sampleSDK' do
   # For Transcend Developers
   # We already have our framework build included in sampleSDK Frameworks(on XCODE check sampleSDK/Frameworks/Release-iphonesimulator)
   # But if you are working on ios-library and want to change functionality in framework
-  # Step1: Build the library and find the build directory path
-  # Step2: delete the sampleSDK/Frameworks/Release-iphonesimulator and upload latest build
+  # Step 1: Build the library and find the build directory path
+  # Step 2: delete the sampleSDK/Frameworks/Release-iphonesimulator and upload latest build
   # For Transcend cUSTOMERS:
   # Step 1: Download the Build.tar.gz or Build.zip
   # Step 2: Unizp and include the WebView.Framework and Pod_WebView.Framework on you applications Framework folder.
