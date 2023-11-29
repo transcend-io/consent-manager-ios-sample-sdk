@@ -94,6 +94,7 @@ struct ContentView: View {
                                 
                             }
                             
+                            // Sample Use of TranscendWebViewUI
                             Button(action: {
                                 showingPopover = true
                             })
