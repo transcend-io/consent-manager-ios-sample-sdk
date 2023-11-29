@@ -5,7 +5,7 @@ target 'sampleSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Approach 1: For Transced Developers, If you are building sample appliciation locally
+  # Approach 1: For Transced Developers, If you are building sample applciation locally
   # Note: Transcend customers cannot use this approach yet since we didn't pulish our cocoapod live
   # Step 1: Clone https://github.com/transcend-io/consent-manager-ios-library
   # Step 2: Build the library by clicking play button on Xcode or refer build command for ios-library's .github/workflows/build.yaml
