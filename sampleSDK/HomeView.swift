@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WebKit
+import WebView
 
 
 struct HomeView: View {
@@ -60,9 +61,9 @@ struct FloatingButton: View {
                     }
             )
             .popover(isPresented: $showingPopover) {
-//                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js")
-//                    .foregroundColor(Color.transcendDefault)
-//                    .padding()
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js")
+                    .foregroundColor(Color.transcendDefault)
+                    .padding()
         }
     }
 }

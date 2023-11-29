@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B085B24C2AF4F24D000B3CBE /* WebView.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */; };
-		B085B24E2AF4F250000B3CBE /* Pods_WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */; };
-		B085B24F2AF4F250000B3CBE /* Pods_WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B085B2502AF4F251000B3CBE /* WebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B085B24A2AF4F24D000B3CBE /* WebView.framework */; };
-		B085B2512AF4F251000B3CBE /* WebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B085B24A2AF4F24D000B3CBE /* WebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0D499482B17B6E10040716B /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D499472B17B6E10040716B /* Transcend.xcframework */; };
+		B0D499492B17B6E10040716B /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0D499472B17B6E10040716B /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0E7F0152AF2B612001ACA3E /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */; };
 		B0E7F0172AF2B612001ACA3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0162AF2B612001ACA3E /* ContentView.swift */; };
 		B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E7F0182AF2B613001ACA3E /* Assets.xcassets */; };
@@ -42,6 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B0D499462B17A5C30040716B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0D499492B17B6E10040716B /* Transcend.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0E7F0FB2AF4D2A6001ACA3E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,18 +70,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0E7F12F2AF4DA35001ACA3E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B085B2512AF4F251000B3CBE /* WebView.framework in Embed Frameworks */,
-				B085B24F2AF4F250000B3CBE /* Pods_WebView.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -86,9 +82,7 @@
 		B085B2302AF4E7FA000B3CBE /* sampleSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B2312AF4E7FA000B3CBE /* sampleSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B23D2AF4E876000B3CBE /* Pods_sampleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_sampleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_WebView.framework; sourceTree = "<group>"; };
-		B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = WebView.framework.dSYM; sourceTree = "<group>"; };
-		B085B24A2AF4F24D000B3CBE /* WebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebView.framework; sourceTree = "<group>"; };
+		B0D499472B17B6E10040716B /* Transcend.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Transcend.xcframework; path = ../Transcend.xcframework; sourceTree = "<group>"; };
 		B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleSDKApp.swift; sourceTree = "<group>"; };
 		B0E7F0162AF2B612001ACA3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0E7F0182AF2B613001ACA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,8 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B085B2502AF4F251000B3CBE /* WebView.framework in Frameworks */,
-				B085B24E2AF4F250000B3CBE /* Pods_WebView.framework in Frameworks */,
+				B0D499482B17B6E10040716B /* Transcend.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,16 +135,6 @@
 				5FE48B0B6C0FA0059015EF77 /* Pods-sampleSDKTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B085B2472AF4F24D000B3CBE /* Release-iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				B085B2482AF4F24D000B3CBE /* Pods_WebView.framework */,
-				B085B2492AF4F24D000B3CBE /* WebView.framework.dSYM */,
-				B085B24A2AF4F24D000B3CBE /* WebView.framework */,
-			);
-			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
 		B0E7F0082AF2B612001ACA3E = {
@@ -208,7 +191,7 @@
 		BFD886A490F18AE8494F6DEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B085B2472AF4F24D000B3CBE /* Release-iphonesimulator */,
+				B0D499472B17B6E10040716B /* Transcend.xcframework */,
 				B085B23D2AF4E876000B3CBE /* Pods_sampleSDK.framework */,
 				EC8FCE7C141E9B033E4E68FB /* Pods_sampleSDK_sampleSDKUITests.framework */,
 				9804D1A18ABD26842ABF210F /* Pods_sampleSDKTests.framework */,
@@ -227,7 +210,7 @@
 				B0E7F00D2AF2B612001ACA3E /* Sources */,
 				B0E7F00E2AF2B612001ACA3E /* Frameworks */,
 				B0E7F00F2AF2B612001ACA3E /* Resources */,
-				B0E7F12F2AF4DA35001ACA3E /* Embed Frameworks */,
+				B0D499462B17A5C30040716B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,7 +311,6 @@
 			files = (
 				B0E7F01C2AF2B613001ACA3E /* Preview Assets.xcassets in Resources */,
 				B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */,
-				B085B24C2AF4F24D000B3CBE /* WebView.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
