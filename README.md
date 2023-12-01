@@ -17,10 +17,8 @@ Note: Just a heads up, the Cocoapod approach isn't ready for use just yet. We'll
 ### Manual Steps
 
 - Download the most recent version of our framework for Xcode from links below, and extract the file. Make sure your Xcode version ≥ 12.
-    
-[Transcend.xcframework.tar.gz](https://github.com/transcend-io/consent-manager-ios-sample-sdk/files/13518357/Transcend.xcframework.tar.gz)
-[Transcend.xcframework.zip](https://github.com/transcend-io/consent-manager-ios-sample-sdk/files/13518358/Transcend.xcframework.zip)
-
+[Transcend.xcframework.tar.gz](https://github.com/transcend-io/consent-manager-ios-sample-sdk/files/13526419/Transcend.xcframework.tar.gz)
+[Transcend.xcframework.zip](https://github.com/transcend-io/consent-manager-ios-sample-sdk/files/13526425/Transcend.xcframework.zip)
 - Select your project and appropriate target in Xcode.
 - Scroll down to `Frameworks, Libraries, and Embedded Content`.
 - **Approach 1**: Dragging in the Transcend XCFramework will automatically establish it as a dependency for your target.
