@@ -7,7 +7,7 @@
 
 import SwiftUI
 import WebKit
-import WebView
+import Transcend
 
 struct ContentView: View {
     @State private var username: String = ""
