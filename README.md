@@ -12,7 +12,7 @@ The framework contains the majority of the logic for saving TCF-related data and
 
 - The package can be added Manually or using Cocoapods.
 
-Note: Just a heads up, the Cocoapod approach isn't ready for use just yet. We'll be rolling it out by Nov 30th.
+Note: Just a heads up, the Swift Package Manager approach isn't ready for use just yet. We'll be rolling it out soon.
 
 ### Manual Steps
 
@@ -29,6 +29,11 @@ Note: Just a heads up, the Cocoapod approach isn't ready for use just yet. We'll
 
 ![image](https://github.com/transcend-io/consent-manager-ios-sample-sdk/assets/23165664/d007cf9b-8c53-4f49-a2d1-f5a4dab67494)
 
+### Using Cocoapods
+
+- Add the dependency on your project's Podfile
+    - `pod 'Transcend'`
+- Run `pod install` to fetch the Transcend Framework.
 
 ### Step 2: Use the custom Transcend WebView (Share the AirgapUrl)
 
@@ -73,6 +78,8 @@ Note: Just a heads up, the Cocoapod approach isn't ready for use just yet. We'll
     ### Usage of TransendConsentWebViewUI
     
     ```swift
+    import Transcend
+    
     struct ContentView: View {
         var body: some View {
           // Sample Use of TranscendWebViewUI
