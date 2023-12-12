@@ -12,6 +12,8 @@ import Transcend
 
 struct HomeView: View {
     @State public var showingPopover = false
+    @State var showTranscendWebView = false
+
     var body: some View {
         TabView {
             myWebView(url: URL(string: "https://transcend.io/")!)
@@ -26,7 +28,47 @@ struct HomeView: View {
                     Label("EshopIt", systemImage: "storefront")
                 }
                 .tag(2)
-        }.overlay {
+            if(self.showTranscendWebView){
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                                   isInit: false, didFinishNavigation: nil)
+                    .tabItem {
+                        Label("Consent", systemImage: "storefront")
+                    }
+                    .tag(3)
+            }
+        }
+        .onAppear {
+            TranscendWebView.transcendAPI.webAppInterface.getRegimes(completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    if(result?.contains("us") == true){
+                        self.showTranscendWebView = true
+                    }
+                }
+            })
+            
+            TranscendWebView.transcendAPI.webAppInterface.getConsent(completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    let response: TrackingConsentDetails = (result) ?? TrackingConsentDetails()
+                    for key in response.purposes.keys{
+                        if let purpose = response.purposes[key] {
+                            switch purpose {
+                            case .bool(let value):
+                                print("\(key) Bool Value: \(value)")
+                            case .string(let value):
+                                print("\(key) String Value: \(value)")
+                            default:
+                                print("No Value found for \(key)")
+                            }
+                        }
+                    }
+                }
+            })
+        }
+        .overlay {
             FloatingButton(action: {
                 showingPopover = true
             }, showingPopover: $showingPopover)
@@ -61,9 +103,10 @@ struct FloatingButton: View {
                     }
             )
             .popover(isPresented: $showingPopover) {
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js")
-                    .foregroundColor(Color.transcendDefault)
-                    .padding()
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                                   isInit: false, didFinishNavigation: nil)
+                .foregroundColor(Color.transcendDefault)
+                .padding()
         }
     }
 }

@@ -10,11 +10,13 @@ import WebKit
 import Transcend
 
 struct ContentView: View {
+    @Binding var canUseAPI: Bool
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
+    
     var body: some View {
         NavigationStack {
             GeometryReader{ geo in
@@ -47,7 +49,9 @@ struct ContentView: View {
                             }.padding(.horizontal)
                         
                         Button(action: {
-                            isLoggedIn = true
+                            if(canUseAPI){
+                                isLoggedIn = true
+                            }
                         })
                         {
                             Text("Sign In")
@@ -104,9 +108,10 @@ struct ContentView: View {
                                 
                             }
                             .popover(isPresented: $showingPopover) {
-                                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js")
-                                    .foregroundColor(Color.transcendDefault)
-                                    .padding()
+                                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                                                        isInit: false, didFinishNavigation: nil)
+                                .foregroundColor(Color.transcendDefault)
+                                .padding()
                             }
                         }
                         .padding()
@@ -138,5 +143,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    ContentView(canUseAPI: Binding<Bool>(get: { true }, set: { _ in }))
 }
