@@ -18,6 +18,15 @@ struct ContentView: View {
     @State private var isLoggedIn = false
     
     var body: some View {
+        let onCloseListener: ((Result<Void,Error>) -> Void) = { result in
+            switch result {
+            case .success():
+                self.showingPopover = false
+            case .failure(let error):
+                print("Error during web view navigation: \(error.localizedDescription)")
+            }
+        }
+        
         NavigationStack {
             GeometryReader{ geo in
                 VStack {
@@ -109,7 +118,7 @@ struct ContentView: View {
                             }
                             .popover(isPresented: $showingPopover) {
                                 TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
-                                                        isInit: false, didFinishNavigation: nil)
+                                                   isInit: false, onCloseListener: onCloseListener)
                                 .foregroundColor(Color.transcendDefault)
                                 .padding()
                             }
