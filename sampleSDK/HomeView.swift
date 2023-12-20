@@ -9,7 +9,6 @@ import SwiftUI
 import WebKit
 import Transcend
 
-
 struct HomeView: View {
     @State public var showingPopover = false
     @State var showTranscendWebView = false
@@ -22,13 +21,13 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }
                 .tag(1)
-               
+
             myWebView(url: URL(string: "https://eshopit.co/")!)
                 .tabItem {
                     Label("EshopIt", systemImage: "storefront")
                 }
                 .tag(2)
-            if(self.showTranscendWebView){
+            if self.showTranscendWebView {
                 TranscendWebViewUI(transcendConsentUrl: "https://cdn.dev.trancsend.com/anotherminh/development/cm/66ded8fe-b10f-4f6c-9829-bf277bc28381/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                     .tabItem {
@@ -42,18 +41,18 @@ struct HomeView: View {
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
-                    if(result?.contains("us") == true){
+                    if result?.contains("us") == true {
                         self.showTranscendWebView = true
                     }
                 }
             })
-            
+
             TranscendWebView.transcendAPI.webAppInterface.getConsent(completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
                     let response: TrackingConsentDetails = (result) ?? TrackingConsentDetails()
-                    for key in response.purposes.keys{
+                    for key in response.purposes.keys {
                         if let purpose = response.purposes[key] {
                             switch purpose {
                             case .bool(let value):
@@ -67,8 +66,8 @@ struct HomeView: View {
                     }
                 }
             })
-            
-            TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId:"datadog-ios",completionHandler: {result, error in
+
+            TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId: "datadog-ios", completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
@@ -83,7 +82,7 @@ struct HomeView: View {
                 showingPopover = true
             }, showingPopover: $showingPopover)
         }
-        
+
     }
 }
 
@@ -91,8 +90,8 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    
-    var body: some View{
+
+    var body: some View {
             Button(action: action) {
                 Image("transcendLogo")
                     .resizable()
@@ -121,15 +120,15 @@ struct FloatingButton: View {
     }
 }
 
-public struct myWebView: UIViewRepresentable  {
+public struct myWebView: UIViewRepresentable {
     let webView = WKWebView()
-    var url: URL;
+    var url: URL
 
     public init(url: URL) {
         self.url = url
     }
-    
-    public func makeUIView(context: Context) -> WKWebView{
+
+    public func makeUIView(context: Context) -> WKWebView {
         return self.webView
     }
     public func updateUIView(_ uiView: WKWebView, context: Context) {

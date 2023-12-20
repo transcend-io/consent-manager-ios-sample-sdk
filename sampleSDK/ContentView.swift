@@ -16,21 +16,21 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
-    
+
     var body: some View {
-        let onCloseListener: ((Result<Void,Error>) -> Void) = { result in
+        let onCloseListener: ((Result<Void, Error>) -> Void) = { result in
             switch result {
-            case .success():
+            case .success:
                 self.showingPopover = false
             case .failure(let error):
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
         }
-        
+
         NavigationStack {
-            GeometryReader{ geo in
+            GeometryReader { geo in
                 VStack {
-                    VStack{
+                    VStack {
                         Color.transcendDefault
                             .mask(Image("transcendMainLogo")
                                 .resizable()
@@ -39,8 +39,8 @@ struct ContentView: View {
                             .padding()
                     }
                     .frame(height: geo.size.height * (1/4))
-                    
-                    VStack(){
+
+                    VStack {
                         TextField("Email", text: $email)
                             .padding(10)
                             .overlay {
@@ -48,21 +48,20 @@ struct ContentView: View {
                                     .stroke(Color.gray, lineWidth: 2)
                             }
                             .padding(.horizontal)
-                        
+
                         TextField("Password", text: $password)
                             .padding(10)
                             .foregroundColor(Color("transcendTextDefault"))
                             .overlay {
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.gray,  lineWidth: 2)
+                                    .stroke(Color.gray, lineWidth: 2)
                             }.padding(.horizontal)
-                        
+
                         Button(action: {
-                            if(canUseAPI){
+                            if canUseAPI {
                                 isLoggedIn = true
                             }
-                        })
-                        {
+                        }) {
                             Text("Sign In")
                                 .fontWeight(.semibold)
                                 .font(.title3)
@@ -74,47 +73,44 @@ struct ContentView: View {
                         }
                         .padding()
                         .padding(.vertical)
-                        
+
                         HStack {
                             Rectangle()
                                 .frame(height: 2)
                                 .foregroundColor(Color.gray)
-                            
+
                             Text("OR")
                                 .foregroundColor(Color.gray)
-                            
+
                             Rectangle()
                                 .frame(height: 2)
                                 .foregroundColor(Color.gray)
                         }
                         .padding(.horizontal, 20)
-                        
+
                         HStack {
                             Button(action: {
                                 print("do Something")
-                            })
-                            {
+                            }) {
                                 Image("facebook")
                                     .font(.system(size: 20))
-                                
+
                             }
                             Button(action: {
                                 print("do Something")
-                            })
-                            {
+                            }) {
                                 Image("twitter")
                                     .font(.system(size: 20))
-                                
+
                             }
-                            
+
                             // Sample Use of TranscendWebViewUI
                             Button(action: {
                                 showingPopover = true
-                            })
-                            {
+                            }) {
                                 Image("google")
                                     .font(.system(size: 20))
-                                
+
                             }
                             .popover(isPresented: $showingPopover) {
                                 TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
@@ -125,8 +121,7 @@ struct ContentView: View {
                         }
                         .padding()
                         .padding(.vertical)
-                        
-                        
+
                         HStack {
                             Text("New?")
                             Link(destination: URL(string: "https://transcend.io/contact")!, label: {
@@ -134,10 +129,9 @@ struct ContentView: View {
                             })
                             Text("for new account.")
                         }.padding()
-                        
-                        
+
                     }.frame(height: geo.size.height * (3/4))
-                    
+
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             }
@@ -149,7 +143,6 @@ struct ContentView: View {
         }
     }
 }
-
 
 #Preview {
     ContentView(canUseAPI: Binding<Bool>(get: { true }, set: { _ in }))
