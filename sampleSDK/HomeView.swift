@@ -29,7 +29,7 @@ struct HomeView: View {
                 }
                 .tag(2)
             if(self.showTranscendWebView){
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                TranscendWebViewUI(transcendConsentUrl: "https://cdn.dev.trancsend.com/anotherminh/development/cm/66ded8fe-b10f-4f6c-9829-bf277bc28381/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                     .tabItem {
                         Label("Consent", systemImage: "storefront")
@@ -64,6 +64,16 @@ struct HomeView: View {
                                 print("No Value found for \(key)")
                             }
                         }
+                    }
+                }
+            })
+            
+            TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId:"datadog-ios",completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    if let status = result {
+                        print(status)
                     }
                 }
             })
@@ -103,7 +113,7 @@ struct FloatingButton: View {
                     }
             )
             .popover(isPresented: $showingPopover) {
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                 .foregroundColor(Color.transcendDefault)
                 .padding()

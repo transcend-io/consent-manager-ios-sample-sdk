@@ -25,7 +25,7 @@ struct sampleSDKApp: App {
         
         WindowGroup {
             ContentView(canUseAPI: $canUseAPI)
-            TranscendWebViewUI(transcendConsentUrl: "",
+            TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                     isInit: true, didFinishNavigation: didFinishNavigation)
         }
     }
