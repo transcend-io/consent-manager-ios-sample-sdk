@@ -28,7 +28,8 @@ struct HomeView: View {
                 }
                 .tag(2)
             if self.showTranscendWebView {
-                TranscendWebViewUI(transcendConsentUrl: "https://cdn.dev.trancsend.com/anotherminh/development/cm/66ded8fe-b10f-4f6c-9829-bf277bc28381/airgap.js",
+                // Note: Belongs to Managed Consent Database demo Org
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/ 63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                     .tabItem {
                         Label("Consent", systemImage: "storefront")
