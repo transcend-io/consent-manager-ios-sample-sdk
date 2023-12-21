@@ -113,7 +113,8 @@ struct ContentView: View {
 
                             }
                             .popover(isPresented: $showingPopover) {
-                                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
+                                // Note: Belongs to Managed Consent Database demo Org
+                                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                                    isInit: false, onCloseListener: onCloseListener)
                                 .foregroundColor(Color.transcendDefault)
                                 .padding()
