@@ -9,7 +9,6 @@ import SwiftUI
 import WebKit
 import Transcend
 
-
 struct HomeView: View {
     @State public var showingPopover = false
     @State var showTranscendWebView = false
@@ -22,14 +21,15 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }
                 .tag(1)
-               
+
             myWebView(url: URL(string: "https://eshopit.co/")!)
                 .tabItem {
                     Label("EshopIt", systemImage: "storefront")
                 }
                 .tag(2)
-            if(self.showTranscendWebView){
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+            if self.showTranscendWebView {
+                // Note: Belongs to Managed Consent Database demo Org
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/ 63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                     .tabItem {
                         Label("Consent", systemImage: "storefront")
@@ -42,18 +42,18 @@ struct HomeView: View {
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
-                    if(result?.contains("us") == true){
+                    if result?.contains("us") == true {
                         self.showTranscendWebView = true
                     }
                 }
             })
-            
+
             TranscendWebView.transcendAPI.webAppInterface.getConsent(completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
                     let response: TrackingConsentDetails = (result) ?? TrackingConsentDetails()
-                    for key in response.purposes.keys{
+                    for key in response.purposes.keys {
                         if let purpose = response.purposes[key] {
                             switch purpose {
                             case .bool(let value):
@@ -67,13 +67,23 @@ struct HomeView: View {
                     }
                 }
             })
+
+            TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId: "datadog-ios", completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    if let status = result {
+                        print(status)
+                    }
+                }
+            })
         }
         .overlay {
             FloatingButton(action: {
                 showingPopover = true
             }, showingPopover: $showingPopover)
         }
-        
+
     }
 }
 
@@ -81,8 +91,8 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    
-    var body: some View{
+
+    var body: some View {
             Button(action: action) {
                 Image("transcendLogo")
                     .resizable()
@@ -103,7 +113,8 @@ struct FloatingButton: View {
                     }
             )
             .popover(isPresented: $showingPopover) {
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
+                // Note: Belongs to Managed Consent Database demo Org
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
@@ -111,15 +122,15 @@ struct FloatingButton: View {
     }
 }
 
-public struct myWebView: UIViewRepresentable  {
+public struct myWebView: UIViewRepresentable {
     let webView = WKWebView()
-    var url: URL;
+    var url: URL
 
     public init(url: URL) {
         self.url = url
     }
-    
-    public func makeUIView(context: Context) -> WKWebView{
+
+    public func makeUIView(context: Context) -> WKWebView {
         return self.webView
     }
     public func updateUIView(_ uiView: WKWebView, context: Context) {
