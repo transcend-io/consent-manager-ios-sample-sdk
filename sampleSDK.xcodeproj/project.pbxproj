@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4494A96934E51F793E7E7493 /* Pods_sampleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C183C1DA2BE11800DAD2C3 /* Pods_sampleSDKTests.framework */; };
 		54C74C8C08FE1E975F2651FD /* Pods_sampleSDK_sampleSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BCF911E5DD0F120C70AD5 /* Pods_sampleSDK_sampleSDKUITests.framework */; };
-		B0BC95362B2BAB9D0078CF0D /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BC95352B2BAB9D0078CF0D /* Transcend.xcframework */; };
-		B0BC95372B2BAB9D0078CF0D /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0BC95352B2BAB9D0078CF0D /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0E7C3112B34800900FECC7F /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; };
+		B0E7C3122B34800900FECC7F /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0E7F0152AF2B612001ACA3E /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */; };
 		B0E7F0172AF2B612001ACA3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0162AF2B612001ACA3E /* ContentView.swift */; };
 		B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E7F0182AF2B613001ACA3E /* Assets.xcassets */; };
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B0BC95372B2BAB9D0078CF0D /* Transcend.xcframework in Embed Frameworks */,
+				B0E7C3122B34800900FECC7F /* Transcend.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +81,7 @@
 		B085B22F2AF4E7FA000B3CBE /* sampleSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B2302AF4E7FA000B3CBE /* sampleSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B085B2312AF4E7FA000B3CBE /* sampleSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0BC95352B2BAB9D0078CF0D /* Transcend.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Transcend.xcframework; path = ../Transcend.xcframework; sourceTree = "<group>"; };
+		B0E7C3102B34800900FECC7F /* Transcend.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Transcend.xcframework; path = ../Transcend.xcframework; sourceTree = "<group>"; };
 		B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleSDKApp.swift; sourceTree = "<group>"; };
 		B0E7F0162AF2B612001ACA3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0E7F0182AF2B613001ACA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BC95362B2BAB9D0078CF0D /* Transcend.xcframework in Frameworks */,
+				B0E7C3112B34800900FECC7F /* Transcend.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 		B0A11F142B204C0500B42DE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0BC95352B2BAB9D0078CF0D /* Transcend.xcframework */,
+				B0E7C3102B34800900FECC7F /* Transcend.xcframework */,
 				DA0CB5F29E5FA9700AF31723 /* Pods_sampleSDK.framework */,
 				AF7BCF911E5DD0F120C70AD5 /* Pods_sampleSDK_sampleSDKUITests.framework */,
 				25C183C1DA2BE11800DAD2C3 /* Pods_sampleSDKTests.framework */,

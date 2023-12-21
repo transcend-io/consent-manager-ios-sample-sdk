@@ -20,10 +20,10 @@ struct sampleSDKApp: App {
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
         }
-
+        
         WindowGroup {
             ContentView(canUseAPI: $canUseAPI)
-            TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
+            TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js",
                                     isInit: true, didFinishNavigation: didFinishNavigation)
         }
     }
