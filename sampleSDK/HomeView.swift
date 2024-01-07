@@ -41,7 +41,7 @@ struct HomeView: View {
                 if let error = error {
                     print("UI Error : \(error)")
                 } else {
-                    if result?.contains("gdpr") == true {
+                    if result?.contains("us") == true {
                         self.showTranscendWebView = true
                     }
                 }
