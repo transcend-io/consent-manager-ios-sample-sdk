@@ -12,7 +12,6 @@ import Transcend
 struct HomeView: View {
     @State public var showingPopover = false
     @State var showTranscendWebView = false
-
     var body: some View {
         TabView {
             myWebView(url: URL(string: "https://transcend.io/")!)
@@ -29,7 +28,7 @@ struct HomeView: View {
                 .tag(2)
             if self.showTranscendWebView {
                 // Note: Belongs to Managed Consent Database demo Org
-                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/ 63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
+                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
                                    isInit: false, didFinishNavigation: nil)
                     .tabItem {
                         Label("Consent", systemImage: "storefront")
@@ -91,8 +90,18 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-
+    
+    
     var body: some View {
+        let onCloseListener: ((Result<Void, Error>) -> Void) = { result in
+            switch result {
+            case .success:
+                self.showingPopover = false
+            case .failure(let error):
+                print("Error during web view navigation: \(error.localizedDescription)")
+            }
+        }
+        
             Button(action: action) {
                 Image("transcendLogo")
                     .resizable()
@@ -115,7 +124,7 @@ struct FloatingButton: View {
             .popover(isPresented: $showingPopover) {
                 // Note: Belongs to Managed Consent Database demo Org
                 TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
-                                   isInit: false, didFinishNavigation: nil)
+                                   isInit: false, onCloseListener: onCloseListener)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
         }
@@ -128,6 +137,7 @@ public struct myWebView: UIViewRepresentable {
 
     public init(url: URL) {
         self.url = url
+        self.webView.isInspectable = true
     }
 
     public func makeUIView(context: Context) -> WKWebView {
@@ -137,7 +147,9 @@ public struct myWebView: UIViewRepresentable {
         let request = URLRequest(url: url)
         uiView.load(request)
     }
+    
 }
+
 
 #Preview {
     HomeView()

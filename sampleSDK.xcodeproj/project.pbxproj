@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4494A96934E51F793E7E7493 /* Pods_sampleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C183C1DA2BE11800DAD2C3 /* Pods_sampleSDKTests.framework */; };
 		54C74C8C08FE1E975F2651FD /* Pods_sampleSDK_sampleSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7BCF911E5DD0F120C70AD5 /* Pods_sampleSDK_sampleSDKUITests.framework */; };
-		B0E7C3112B34800900FECC7F /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; };
-		B0E7C3122B34800900FECC7F /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0914C612B4A756C009FFF85 /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; };
+		B0914C622B4A756C009FFF85 /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0E7C3102B34800900FECC7F /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0E7F0152AF2B612001ACA3E /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0142AF2B612001ACA3E /* sampleSDKApp.swift */; };
 		B0E7F0172AF2B612001ACA3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7F0162AF2B612001ACA3E /* ContentView.swift */; };
 		B0E7F0192AF2B613001ACA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E7F0182AF2B613001ACA3E /* Assets.xcassets */; };
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B0A11EDD2B1A7D9000B42DE6 /* Embed Frameworks */ = {
+		B0914C632B4A756C009FFF85 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B0E7C3122B34800900FECC7F /* Transcend.xcframework in Embed Frameworks */,
+				B0914C622B4A756C009FFF85 /* Transcend.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E7C3112B34800900FECC7F /* Transcend.xcframework in Frameworks */,
+				B0914C612B4A756C009FFF85 /* Transcend.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +210,7 @@
 				B0E7F00D2AF2B612001ACA3E /* Sources */,
 				B0E7F00E2AF2B612001ACA3E /* Frameworks */,
 				B0E7F00F2AF2B612001ACA3E /* Resources */,
-				B0A11EDD2B1A7D9000B42DE6 /* Embed Frameworks */,
+				B0914C632B4A756C009FFF85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
