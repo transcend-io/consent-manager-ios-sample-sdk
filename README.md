@@ -12,7 +12,6 @@ The framework contains the majority of the logic for saving TCF-related data and
 
 - The package can be added Manually or using Cocoapods.
 
-Note: Just a heads up, the Swift Package Manager approach isn't ready for use just yet. We'll be rolling it out soon.
 
 ### Manual Steps
 
