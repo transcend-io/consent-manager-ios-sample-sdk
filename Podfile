@@ -11,7 +11,8 @@ target 'sampleSDK' do
   # Step 2: Build the library by clicking play button on Xcode or refer build command for ios-library's .github/workflows/build.yaml
   # Step 3: Uncomment the line below to use our library
   #pod 'Transcend'
-  
+
+
   # Approach 2:
   # For Transcend Developers
   # We already have our framework build included in sampleSDK Frameworks(on XCODE check sampleSDK/Frameworks/Release-iphonesimulator)
