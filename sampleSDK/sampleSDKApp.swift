@@ -24,9 +24,9 @@ struct sampleSDKApp: App {
         WindowGroup {
             ContentView(canUseAPI: $canUseAPI)
             // Note: Belongs to Managed Consent Database demo Org
-            TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
+            TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/90ab36ce-3da0-481c-ba8d-98eb820d716f/airgap.js",
                                isInit: true, ["https://eshopit.co/"], didFinishNavigation: didFinishNavigation)
         }
     }
-    
+
 }

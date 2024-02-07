@@ -90,8 +90,7 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    
-    
+
     var body: some View {
         let onCloseListener: ((Result<Void, Error>) -> Void) = { result in
             switch result {
@@ -101,7 +100,7 @@ struct FloatingButton: View {
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
         }
-        
+
             Button(action: action) {
                 Image("transcendLogo")
                     .resizable()
@@ -147,9 +146,8 @@ public struct myWebView: UIViewRepresentable {
         let request = URLRequest(url: url)
         uiView.load(request)
     }
-    
-}
 
+}
 
 #Preview {
     HomeView()

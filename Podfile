@@ -4,7 +4,7 @@
 target 'sampleSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Transcend', '1.0.1'
+  # pod 'Transcend', '1.0.3'
   # Pods for sampleSDK
 
   target 'sampleSDKTests' do
