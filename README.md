@@ -1,5 +1,7 @@
 # Sample IOS Application
 
+## Note: for this app to work, make sure your airgap bundle is atleast 8.30.0
+
 We provide an IOS xcframework that includes release builds(archives) for the following destinations:
 
 - `generic/platform=iOS`
