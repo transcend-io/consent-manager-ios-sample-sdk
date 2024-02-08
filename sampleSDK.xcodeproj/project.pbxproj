@@ -18,8 +18,6 @@
 		B0E36F6C2B51B5D600080764 /* sampleSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F6B2B51B5D600080764 /* sampleSDKUITests.swift */; };
 		B0E36F6E2B51B5D600080764 /* sampleSDKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F6D2B51B5D600080764 /* sampleSDKUITestsLaunchTests.swift */; };
 		B0E36F7B2B51B61200080764 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F7A2B51B61200080764 /* HomeView.swift */; };
-		B0EA01102B73651500F174F4 /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EA010F2B73651500F174F4 /* Transcend.xcframework */; };
-		B0EA01112B73651500F174F4 /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0EA010F2B73651500F174F4 /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +36,6 @@
 			remoteInfo = sampleSDK;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B0EA01122B73651500F174F4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B0EA01112B73651500F174F4 /* Transcend.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E1F63116CEEC93F16D47E2A /* Pods_sampleSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0EA01102B73651500F174F4 /* Transcend.xcframework in Frameworks */,
 				973A0E9DE40969CA8CB3EC79 /* Pods_sampleSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +183,7 @@
 				B0E36F492B51B5D500080764 /* Sources */,
 				B0E36F4A2B51B5D500080764 /* Frameworks */,
 				B0E36F4B2B51B5D500080764 /* Resources */,
-				B0EA01122B73651500F174F4 /* Embed Frameworks */,
+				F952278C58EBDA80D303470E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +221,7 @@
 				B0E36F632B51B5D600080764 /* Sources */,
 				B0E36F642B51B5D600080764 /* Frameworks */,
 				B0E36F652B51B5D600080764 /* Resources */,
+				29D691506651A6AD7098C6C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +325,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		29D691506651A6AD7098C6C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6CA0CACBF0AFFF329E943C08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +384,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F952278C58EBDA80D303470E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
