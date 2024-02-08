@@ -9000,118 +9000,139 @@
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
       "offset": 588,
-      "length": 62,
-      "value": "\"https:\/\/cdn.transcend.io\/airgap.js\/builds\/8.28.8\/bridge.html\""
+      "length": 67,
+      "value": "\"https:\/\/cdn.transcend-mobile-consent.com\/cm\/BUNDLE_ID\/bridge.html\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 717,
+      "offset": 785,
+      "length": 24,
+      "value": "\"\/(cm|cm-test)\/([^\/]+)\/\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 847,
+      "length": 41,
+      "value": "\"Error: Invalid regex pattern - \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 887,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 997,
       "length": 7,
       "value": "\"cmpId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 767,
+      "offset": 1047,
       "length": 12,
       "value": "\"cmpVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 827,
+      "offset": 1107,
       "length": 18,
       "value": "\"tcfPolicyVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 892,
+      "offset": 1172,
       "length": 13,
       "value": "\"gdprApplies\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 950,
+      "offset": 1230,
       "length": 13,
       "value": "\"publisherCC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1008,
+      "offset": 1288,
       "length": 21,
       "value": "\"purposeOneTreatment\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1083,
+      "offset": 1363,
       "length": 10,
       "value": "\"tcString\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1135,
+      "offset": 1415,
       "length": 17,
       "value": "\"vendor_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1200,
+      "offset": 1480,
       "length": 28,
       "value": "\"vendor_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1288,
+      "offset": 1568,
       "length": 18,
       "value": "\"purpose_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1355,
+      "offset": 1635,
       "length": 29,
       "value": "\"purpose_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1445,
+      "offset": 1725,
       "length": 22,
       "value": "\"specialFeatureOptins\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1523,
+      "offset": 1803,
       "length": 20,
       "value": "\"publisher_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1593,
+      "offset": 1873,
       "length": 31,
       "value": "\"publisher_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1687,
+      "offset": 1967,
       "length": 34,
       "value": "\"publisher_customPurpose_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1788,
+      "offset": 2068,
       "length": 45,
       "value": "\"publisher_customPurpose_legitimateInterests\""
     },
