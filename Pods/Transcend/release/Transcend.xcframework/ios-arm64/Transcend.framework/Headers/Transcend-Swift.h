@@ -257,10 +257,13 @@ using UInt = size_t;
 @class WKNavigation;
 @class WKWebViewConfiguration;
 
+/// A custom WKWebView subclass used to push data onto the local storage of a customer’s app web views.
 SWIFT_CLASS("_TtC9Transcend14BackEndWebView")
 @interface BackEndWebView : WKWebView <WKNavigationDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+/// Invoked when the navigation is complete.
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+/// Invoked when the navigation fails.
 - (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
 - (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration SWIFT_UNAVAILABLE;
 @end
@@ -284,8 +287,23 @@ SWIFT_CLASS_NAMED("TranscendSDKPurposeMap")
 
 SWIFT_CLASS("_TtC9Transcend16TranscendWebView")
 @interface TranscendWebView : WKWebView <WKNavigationDelegate>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// Notifies that the web view finished navigating to a new webpage.
+/// This method is called when the web view completes its navigation to a new webpage.
+/// It triggers the <code>receiveConsentUrl()</code> method of the <code>webAppInterface</code> object, which interacts with birdge.js to load airgap.js
+/// \param webView The web view that finished navigation.
+///
+/// \param navigation The navigation object that completed.
+///
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+/// Notifies that the web view failed navigating to a new webpage.
+/// This method is called when the web view fails to navigation to a new webpage.
+/// \param webView The web view that finished navigation.
+///
+/// \param navigation The navigation object that falied.
+///
+/// \param error reason for failure
+///
 - (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
 - (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration SWIFT_UNAVAILABLE;
 @end
