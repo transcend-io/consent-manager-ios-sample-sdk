@@ -322,11 +322,11 @@
             "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrlSSvp",
             "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrlSSvp",
             "moduleName": "Transcend",
+            "deprecated": true,
             "declAttributes": [
-              "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -344,6 +344,191 @@
                 "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrlSSvg",
                 "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrlSSvg",
                 "moduleName": "Transcend",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "syncDomains",
+            "printedName": "syncDomains",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvp",
+            "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvp",
+            "moduleName": "Transcend",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvg",
+                "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvg",
+                "moduleName": "Transcend",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onCloseListenerV1",
+            "printedName": "onCloseListenerV1",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "moduleName": "Transcend",
+            "deprecated": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "Available"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
               },
@@ -359,14 +544,47 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrlSSvs",
-                "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrlSSvs",
+                "usr": "s:9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -383,29 +601,33 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrlSSvM",
-                "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrlSSvM",
+                "usr": "s:9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A9WebViewUIV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
                 "moduleName": "Transcend",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
           },
           {
             "kind": "Var",
-            "name": "isInit",
-            "printedName": "isInit",
+            "name": "transcendCoreConfig",
+            "printedName": "transcendCoreConfig",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9Transcend0A9WebViewUIV6isInitSbvp",
-            "mangledName": "$s9Transcend0A9WebViewUIV6isInitSbvp",
+            "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvp",
+            "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvp",
             "moduleName": "Transcend",
             "declAttributes": [
               "HasStorage",
@@ -420,14 +642,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV6isInitSbvg",
-                "mangledName": "$s9Transcend0A9WebViewUIV6isInitSbvg",
+                "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvg",
+                "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvg",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
@@ -444,14 +666,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV6isInitSbvs",
-                "mangledName": "$s9Transcend0A9WebViewUIV6isInitSbvs",
+                "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvs",
+                "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0Vvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -468,8 +690,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV6isInitSbvM",
-                "mangledName": "$s9Transcend0A9WebViewUIV6isInitSbvM",
+                "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0VvM",
+                "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfigAA0afG0VvM",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -669,12 +891,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -684,12 +906,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
                           },
                           {
                             "kind": "TypeNominal",
@@ -707,8 +930,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
-            "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
+            "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
             "moduleName": "Transcend",
             "declAttributes": [
               "HasInitialValue",
@@ -725,12 +948,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -740,12 +963,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -763,8 +987,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
-                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
+                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
@@ -782,12 +1006,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -797,12 +1021,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -820,8 +1045,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
-                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
+                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -838,142 +1063,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
-                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "syncDomains",
-            "printedName": "syncDomains",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvp",
-            "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvp",
-            "moduleName": "Transcend",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvg",
-                "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvg",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvs",
-                "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvs",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvM",
-                "mangledName": "$s9Transcend0A9WebViewUIV11syncDomainsSaySSGSgvM",
+                "usr": "s:9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A9WebViewUIV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -1047,8 +1138,10 @@
             "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrl6isInit19didFinishNavigationACSS_Sbys6ResultOyyts5Error_pGcSgtcfc",
             "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrl6isInit19didFinishNavigationACSS_Sbys6ResultOyyts5Error_pGcSgtcfc",
             "moduleName": "Transcend",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "init_kind": "Designated"
           },
@@ -1133,8 +1226,10 @@
             "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrl6isInit_19didFinishNavigationACSS_SbSaySSGys6ResultOyyts5Error_pGcSgtcfc",
             "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrl6isInit_19didFinishNavigationACSS_SbSaySSGys6ResultOyyts5Error_pGcSgtcfc",
             "moduleName": "Transcend",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "init_kind": "Designated"
           },
@@ -1205,8 +1300,145 @@
             "usr": "s:9Transcend0A9WebViewUIV19transcendConsentUrl6isInit15onCloseListenerACSS_Sbys6ResultOyyts5Error_pGcSgtcfc",
             "mangledName": "$s9Transcend0A9WebViewUIV19transcendConsentUrl6isInit15onCloseListenerACSS_Sbys6ResultOyyts5Error_pGcSgtcfc",
             "moduleName": "Transcend",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transcendCoreConfig:didFinishNavigation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendWebViewUI",
+                "printedName": "Transcend.TranscendWebViewUI",
+                "usr": "s:9Transcend0A9WebViewUIV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfig19didFinishNavigationAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfig19didFinishNavigationAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transcendCoreConfig:onCloseListener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendWebViewUI",
+                "printedName": "Transcend.TranscendWebViewUI",
+                "usr": "s:9Transcend0A9WebViewUIV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9Transcend0A9WebViewUIV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A9WebViewUIV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgtcfc",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -1273,7 +1505,8 @@
         "intro_iOS": "13.0",
         "declAttributes": [
           "AccessControl",
-          "Available"
+          "Available",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -1312,6 +1545,356 @@
         "name": "TranscendWebViewWrapper",
         "printedName": "TranscendWebViewWrapper",
         "children": [
+          {
+            "kind": "Var",
+            "name": "syncDomains",
+            "printedName": "syncDomains",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvp",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvp",
+            "moduleName": "Transcend",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvg",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvg",
+                "moduleName": "Transcend",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onCloseListenerV1",
+            "printedName": "onCloseListenerV1",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "moduleName": "Transcend",
+            "deprecated": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "Available"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
+                "moduleName": "Transcend",
+                "deprecated": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transcendCoreConfig",
+            "printedName": "transcendCoreConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvp",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvp",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvg",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvg",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvs",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0Vvs",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0VvM",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfigAA0afG0VvM",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "didFinishNavigation",
@@ -1505,12 +2088,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1520,12 +2103,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
                           },
                           {
                             "kind": "TypeNominal",
@@ -1543,8 +2127,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
-            "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
+            "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
             "moduleName": "Transcend",
             "declAttributes": [
               "HasInitialValue",
@@ -1561,12 +2145,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -1576,12 +2160,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -1599,8 +2184,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
+                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
@@ -1618,12 +2203,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -1633,12 +2218,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -1656,8 +2242,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
+                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -1674,142 +2260,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "syncDomains",
-            "printedName": "syncDomains",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvp",
-            "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvp",
-            "moduleName": "Transcend",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvg",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvg",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvs",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvs",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvM",
-                "mangledName": "$s9Transcend0A14WebViewWrapperV11syncDomainsSaySSGSgvM",
+                "usr": "s:9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A14WebViewWrapperV15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -1819,7 +2271,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(transcendConsentUrl:didFinishNavigation:)",
+            "printedName": "init(transcendCoreConfig:onCloseListener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1829,9 +2281,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               },
               {
                 "kind": "TypeNominal",
@@ -1874,18 +2326,20 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9Transcend0A14WebViewWrapperV19transcendConsentUrl19didFinishNavigationACSS_ys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendConsentUrl19didFinishNavigationACSS_ys6ResultOyyts5Error_pGcSgtcfc",
+            "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
             "moduleName": "Transcend",
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(transcendConsentUrl:syncDomains:didFinishNavigation:)",
+            "printedName": "init(transcendCoreConfig:didFinishNavigation:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1895,23 +2349,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               },
               {
                 "kind": "TypeNominal",
@@ -1954,18 +2394,19 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9Transcend0A14WebViewWrapperV19transcendConsentUrl11syncDomains19didFinishNavigationACSS_SaySSGys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendConsentUrl11syncDomains19didFinishNavigationACSS_SaySSGys6ResultOyyts5Error_pGcSgtcfc",
+            "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfig19didFinishNavigationAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfig19didFinishNavigationAcA0afG0V_ys6ResultOyyts5Error_pGcSgtcfc",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(transcendConsentUrl:onCloseListener:)",
+            "printedName": "init(transcendCoreConfig:onCloseListener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1975,19 +2416,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1997,12 +2438,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
                           },
                           {
                             "kind": "TypeNominal",
@@ -2020,11 +2462,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9Transcend0A14WebViewWrapperV19transcendConsentUrl15onCloseListenerACSS_ys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendConsentUrl15onCloseListenerACSS_ys6ResultOyyts5Error_pGcSgtcfc",
+            "usr": "s:9Transcend0A14WebViewWrapperV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A14WebViewWrapperV19transcendCoreConfig15onCloseListenerAcA0afG0V_ys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgtcfc",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -2113,7 +2556,8 @@
         "intro_iOS": "13.0",
         "declAttributes": [
           "AccessControl",
-          "Available"
+          "Available",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -2265,6 +2709,16 @@
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Transcend",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -3954,9 +4408,31 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC7webViewAcA0abF0C_tcfc",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "receiveConsentUrl",
+            "printedName": "receiveConsentUrl()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9Transcend15WebAppInterfaceC17receiveConsentUrlyyF",
+            "mangledName": "$s9Transcend15WebAppInterfaceC17receiveConsentUrlyyF",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -4029,7 +4505,8 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC10getRegimes17completionHandleryyShySSGSg_s5Error_pSgtc_tF",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4096,7 +4573,8 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC10getConsent17completionHandleryyAA08TrackingF7DetailsVSg_s5Error_pSgtc_tF",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4197,7 +4675,8 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC10setConsent__01mB4View17completionHandleryAA08TrackingF7DetailsVSg_SSSgSo05WKWebG0CySbSg_s5Error_pSgtctF",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4234,7 +4713,8 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC012setConsentInB4View17completionHandleryyyc_tF",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4307,81 +4787,57 @@
             "mangledName": "$s9Transcend15WebAppInterfaceC19getSDKConsentStatus9serviceId17completionHandlerySS_yAA07ConsentG0OSg_s5Error_pSgtctF",
             "moduleName": "Transcend",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "startPollAirgapReady",
-            "printedName": "startPollAirgapReady(completionHandler:)",
+            "name": "convertJSONStringToType",
+            "printedName": "convertJSONStringToType(_:type:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Any?, Swift.Error?) -> ())?",
+                "printedName": "τ_0_0?",
                 "children": [
                   {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Any?, Swift.Error?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Any?, Swift.Error?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Any?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ProtocolComposition",
-                                "printedName": "Any"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Swift.Error?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Error",
-                                "printedName": "Swift.Error",
-                                "usr": "s:s5ErrorP"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:9Transcend15WebAppInterfaceC20startPollAirgapReady17completionHandleryyypSg_s5Error_pSgtcSg_tF",
-            "mangledName": "$s9Transcend15WebAppInterfaceC20startPollAirgapReady17completionHandleryyypSg_s5Error_pSgtcSg_tF",
+            "usr": "s:9Transcend15WebAppInterfaceC23convertJSONStringToType_4typexSgSS_xmtSeRzlF",
+            "mangledName": "$s9Transcend15WebAppInterfaceC23convertJSONStringToType_4typexSgSS_xmtSeRzlF",
             "moduleName": "Transcend",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -4391,7 +4847,8 @@
         "mangledName": "$s9Transcend15WebAppInterfaceC",
         "moduleName": "Transcend",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -4425,6 +4882,198 @@
         "children": [
           {
             "kind": "Var",
+            "name": "onCloseListenerV1",
+            "printedName": "onCloseListenerV1",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvp",
+            "moduleName": "Transcend",
+            "deprecated": true,
+            "declAttributes": [
+              "Custom",
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "Available"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvg",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvs",
+                "moduleName": "Transcend",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A7WebViewC17onCloseListenerV1ys6ResultOyyts5Error_pGcSgvM",
+                "moduleName": "Transcend",
+                "deprecated": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "transcendAPI",
             "printedName": "transcendAPI",
             "children": [
@@ -4453,7 +5102,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4576,7 +5226,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4661,92 +5312,6 @@
           },
           {
             "kind": "Var",
-            "name": "transcendConsentUrl",
-            "printedName": "transcendConsentUrl",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:9Transcend0A7WebViewC19transcendConsentUrlSSvp",
-            "mangledName": "$s9Transcend0A7WebViewC19transcendConsentUrlSSvp",
-            "moduleName": "Transcend",
-            "declAttributes": [
-              "Custom",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC19transcendConsentUrlSSvg",
-                "mangledName": "$s9Transcend0A7WebViewC19transcendConsentUrlSSvg",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC19transcendConsentUrlSSvs",
-                "mangledName": "$s9Transcend0A7WebViewC19transcendConsentUrlSSvs",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC19transcendConsentUrlSSvM",
-                "mangledName": "$s9Transcend0A7WebViewC19transcendConsentUrlSSvM",
-                "moduleName": "Transcend",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "didFinishNavigation",
             "printedName": "didFinishNavigation",
             "children": [
@@ -4798,7 +5363,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4939,12 +5505,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -4954,12 +5520,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
                           },
                           {
                             "kind": "TypeNominal",
@@ -4977,14 +5544,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
-            "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvp",
+            "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
+            "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvp",
             "moduleName": "Transcend",
             "declAttributes": [
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4996,12 +5564,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -5011,12 +5579,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -5034,8 +5603,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
-                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvg",
+                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
+                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvg",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
@@ -5053,12 +5622,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                    "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                        "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -5068,12 +5637,13 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), Swift.Error>",
+                            "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "TrackingConsentDetails",
+                                "printedName": "Transcend.TrackingConsentDetails",
+                                "usr": "s:9Transcend22TrackingConsentDetailsV"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -5091,8 +5661,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
-                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvs",
+                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
+                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -5109,8 +5679,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
-                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyyts5Error_pGcSgvM",
+                "usr": "s:9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
+                "mangledName": "$s9Transcend0A7WebViewC15onCloseListenerys6ResultOyAA22TrackingConsentDetailsVs5Error_pGcSgvM",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -5170,7 +5740,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -5305,41 +5876,25 @@
           },
           {
             "kind": "Var",
-            "name": "syncDomains",
-            "printedName": "syncDomains",
+            "name": "transcendCoreConfig",
+            "printedName": "transcendCoreConfig",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9Transcend0A7WebViewC11syncDomainsSaySSGSgvp",
-            "mangledName": "$s9Transcend0A7WebViewC11syncDomainsSaySSGSgvp",
+            "usr": "s:9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvp",
+            "mangledName": "$s9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvp",
             "moduleName": "Transcend",
             "declAttributes": [
               "Custom",
-              "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -5350,30 +5905,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC11syncDomainsSaySSGSgvg",
-                "mangledName": "$s9Transcend0A7WebViewC11syncDomainsSaySSGSgvg",
+                "usr": "s:9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvg",
+                "mangledName": "$s9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvg",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "get"
@@ -5390,30 +5929,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "TranscendCoreConfig",
+                    "printedName": "Transcend.TranscendCoreConfig",
+                    "usr": "s:9Transcend0A10CoreConfigV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC11syncDomainsSaySSGSgvs",
-                "mangledName": "$s9Transcend0A7WebViewC11syncDomainsSaySSGSgvs",
+                "usr": "s:9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvs",
+                "mangledName": "$s9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0Vvs",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "set"
@@ -5430,8 +5953,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9Transcend0A7WebViewC11syncDomainsSaySSGSgvM",
-                "mangledName": "$s9Transcend0A7WebViewC11syncDomainsSaySSGSgvM",
+                "usr": "s:9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0VvM",
+                "mangledName": "$s9Transcend0A7WebViewC19transcendCoreConfigAA0aeF0VvM",
                 "moduleName": "Transcend",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -5457,7 +5980,8 @@
             "declAttributes": [
               "Custom",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -5543,7 +6067,8 @@
             "declAttributes": [
               "Custom",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -5613,7 +6138,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(frame:configuration:transcendConsentUrl:didFinishNavigation:)",
+            "printedName": "init(frame:configuration:transcendCoreConfig:didFinishNavigation:onCloseListenerV1:onCloseListener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5635,9 +6160,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               },
               {
                 "kind": "TypeNominal",
@@ -5676,61 +6201,8 @@
                     ]
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl19didFinishNavigationACSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl19didFinishNavigationACSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtcfc",
-            "moduleName": "Transcend",
-            "declAttributes": [
-              "Custom",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(frame:configuration:transcendConsentUrl:syncDomains:didFinishNavigation:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TranscendWebView",
-                "printedName": "Transcend.TranscendWebView",
-                "usr": "c:@M@Transcend@objc(cs)TranscendWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebViewConfiguration",
-                "printedName": "WebKit.WKWebViewConfiguration",
-                "usr": "c:objc(cs)WKWebViewConfiguration"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
               },
               {
                 "kind": "TypeNominal",
@@ -5769,57 +6241,18 @@
                     ]
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl11syncDomains19didFinishNavigationACSo6CGRectV_So05WKWebC13ConfigurationCSSSaySSGys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl11syncDomains19didFinishNavigationACSo6CGRectV_So05WKWebC13ConfigurationCSSSaySSGys6ResultOyyts5Error_pGcSgtcfc",
-            "moduleName": "Transcend",
-            "declAttributes": [
-              "Custom",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(frame:configuration:transcendConsentUrl:onCloseListener:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TranscendWebView",
-                "printedName": "Transcend.TranscendWebView",
-                "usr": "c:@M@Transcend@objc(cs)TranscendWebView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebViewConfiguration",
-                "printedName": "WebKit.WKWebViewConfiguration",
-                "usr": "c:objc(cs)WKWebViewConfiguration"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -5829,12 +6262,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
                           },
                           {
                             "kind": "TypeNominal",
@@ -5848,23 +6282,25 @@
                     ]
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl15onCloseListenerACSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtcfc",
-            "mangledName": "$s9Transcend0A7WebViewC5frame13configuration19transcendConsentUrl15onCloseListenerACSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtcfc",
+            "usr": "s:9Transcend0A7WebViewC5frame13configuration19transcendCoreConfig19didFinishNavigation17onCloseListenerV10lmN0ACSo6CGRectV_So05WKWebC13ConfigurationCAA0agH0Vys6ResultOyyts5Error_pGcSgATyAQyAA22TrackingConsentDetailsVsAR_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A7WebViewC5frame13configuration19transcendCoreConfig19didFinishNavigation17onCloseListenerV10lmN0ACSo6CGRectV_So05WKWebC13ConfigurationCAA0agH0Vys6ResultOyyts5Error_pGcSgATyAQyAA22TrackingConsentDetailsVsAR_pGcSgtcfc",
             "moduleName": "Transcend",
             "declAttributes": [
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(coder:)",
+            "printedName": "init(coder:transcendCoreConfig:didFinishNavigation:onCloseListenerV1:onCloseListener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5885,20 +6321,144 @@
                 "name": "NSCoder",
                 "printedName": "Foundation.NSCoder",
                 "usr": "c:objc(cs)NSCoder"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TrackingConsentDetails",
+                            "printedName": "Transcend.TrackingConsentDetails",
+                            "usr": "s:9Transcend22TrackingConsentDetailsV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@Transcend@objc(cs)TranscendWebView(im)initWithCoder:",
-            "mangledName": "$s9Transcend0A7WebViewC5coderACSgSo7NSCoderC_tcfc",
+            "usr": "s:9Transcend0A7WebViewC5coder19transcendCoreConfig19didFinishNavigation17onCloseListenerV10klM0ACSgSo7NSCoderC_AA0afG0Vys6ResultOyyts5Error_pGcSgARyAOyAA22TrackingConsentDetailsVsAP_pGcSgtcfc",
+            "mangledName": "$s9Transcend0A7WebViewC5coder19transcendCoreConfig19didFinishNavigation17onCloseListenerV10klM0ACSgSo7NSCoderC_AA0afG0Vys6ResultOyyts5Error_pGcSgARyAOyAA22TrackingConsentDetailsVsAP_pGcSgtcfc",
             "moduleName": "Transcend",
-            "overriding": true,
-            "objc_name": "initWithCoder:",
             "declAttributes": [
-              "Dynamic",
-              "ObjC",
               "Custom",
               "Required",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -5941,7 +6501,8 @@
             "declAttributes": [
               "ObjC",
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -5990,14 +6551,15 @@
             "declAttributes": [
               "ObjC",
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
             "name": "createOrGetInstance",
-            "printedName": "createOrGetInstance(frame:configuration:transcendConsentUrl:didFinishNavigation:)",
+            "printedName": "createOrGetInstance(frame:configuration:transcendCoreConfig:didFinishNavigation:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6027,9 +6589,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
               },
               {
                 "kind": "TypeNominal",
@@ -6073,118 +6635,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendConsentUrl19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtFZ",
-            "mangledName": "$s9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendConsentUrl19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCSSys6ResultOyyts5Error_pGcSgtFZ",
+            "usr": "s:9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendCoreConfig19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCAA0akL0Vys6ResultOyyts5Error_pGcSgtFZ",
+            "mangledName": "$s9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendCoreConfig19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCAA0akL0Vys6ResultOyyts5Error_pGcSgtFZ",
             "moduleName": "Transcend",
             "static": true,
             "declAttributes": [
               "Custom",
               "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createOrGetInstance",
-            "printedName": "createOrGetInstance(frame:configuration:transcendConsentUrl:syncDomains:didFinishNavigation:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Transcend.TranscendWebView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TranscendWebView",
-                    "printedName": "Transcend.TranscendWebView",
-                    "usr": "c:@M@Transcend@objc(cs)TranscendWebView"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "WKWebViewConfiguration",
-                "printedName": "WebKit.WKWebViewConfiguration",
-                "usr": "c:objc(cs)WKWebViewConfiguration"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Result<(), Swift.Error>) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Result<(), Swift.Error>) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Result",
-                        "printedName": "Swift.Result<(), Swift.Error>",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:s6ResultO"
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendConsentUrl11syncDomains19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCSSSaySSGys6ResultOyyts5Error_pGcSgtFZ",
-            "mangledName": "$s9Transcend0A7WebViewC19createOrGetInstance5frame13configuration19transcendConsentUrl11syncDomains19didFinishNavigationACSgSo6CGRectV_So05WKWebC13ConfigurationCSSSaySSGys6ResultOyyts5Error_pGcSgtFZ",
-            "moduleName": "Transcend",
-            "static": true,
-            "declAttributes": [
-              "Custom",
-              "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -6238,6 +6697,7 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)WKWebView",
+        "hasMissingDesignatedInitializers": true,
         "superclassNames": [
           "WebKit.WKWebView",
           "UIKit.UIView",
@@ -6344,7 +6804,8 @@
             "declAttributes": [
               "Custom",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -6439,7 +6900,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -6550,7 +7012,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -6661,7 +7124,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -6772,7 +7236,8 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -6939,7 +7404,8 @@
             "moduleName": "Transcend",
             "declAttributes": [
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -7023,7 +7489,8 @@
             "declAttributes": [
               "ObjC",
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -7072,7 +7539,8 @@
             "declAttributes": [
               "ObjC",
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -7123,6 +7591,7 @@
         "declAttributes": [
           "Custom",
           "AccessControl",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)WKWebView",
@@ -7196,6 +7665,129 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Transcend",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TranscendCoreConfig",
+        "printedName": "TranscendCoreConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transcendConsentUrl:destroyOnClose:defaultAttributes:token:syncDomains:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TranscendCoreConfig",
+                "printedName": "Transcend.TranscendCoreConfig",
+                "usr": "s:9Transcend0A10CoreConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9Transcend0A10CoreConfigV19transcendConsentUrl14destroyOnClose17defaultAttributes5token11syncDomainsACSS_SbSDyS2SGSSSaySSGtcfc",
+            "mangledName": "$s9Transcend0A10CoreConfigV19transcendConsentUrl14destroyOnClose17defaultAttributes5token11syncDomainsACSS_SbSDyS2SGSSSaySSGtcfc",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getDefaultAttributesAsString",
+            "printedName": "getDefaultAttributesAsString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9Transcend0A10CoreConfigV28getDefaultAttributesAsStringSSyF",
+            "mangledName": "$s9Transcend0A10CoreConfigV28getDefaultAttributesAsStringSSyF",
+            "moduleName": "Transcend",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9Transcend0A10CoreConfigV",
+        "mangledName": "$s9Transcend0A10CoreConfigV",
+        "moduleName": "Transcend",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -8943,7 +9535,7 @@
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/TranscendScriptMessageHandler.swift",
       "kind": "StringLiteral",
-      "offset": 156,
+      "offset": 513,
       "length": 29,
       "value": "\"Transcend.TranscendScriptMessageHandler\""
     },
@@ -9000,139 +9592,139 @@
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
       "offset": 588,
-      "length": 67,
-      "value": "\"https:\/\/cdn.transcend-mobile-consent.com\/cm\/BUNDLE_ID\/bridge.html\""
+      "length": 72,
+      "value": "\"https:\/\/cdn.transcend-mobile-consent.com\/VERSION\/BUNDLE_ID\/bridge.html\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 785,
+      "offset": 790,
       "length": 24,
       "value": "\"\/(cm|cm-test)\/([^\/]+)\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 847,
+      "offset": 852,
       "length": 41,
       "value": "\"Error: Invalid regex pattern - \""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 887,
+      "offset": 892,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 997,
+      "offset": 1002,
       "length": 7,
       "value": "\"cmpId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1047,
+      "offset": 1052,
       "length": 12,
       "value": "\"cmpVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1107,
+      "offset": 1112,
       "length": 18,
       "value": "\"tcfPolicyVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1172,
+      "offset": 1177,
       "length": 13,
       "value": "\"gdprApplies\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1230,
+      "offset": 1235,
       "length": 13,
       "value": "\"publisherCC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1288,
+      "offset": 1293,
       "length": 21,
       "value": "\"purposeOneTreatment\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1363,
+      "offset": 1368,
       "length": 10,
       "value": "\"tcString\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1415,
+      "offset": 1420,
       "length": 17,
       "value": "\"vendor_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1480,
+      "offset": 1485,
       "length": 28,
       "value": "\"vendor_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1568,
+      "offset": 1573,
       "length": 18,
       "value": "\"purpose_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1635,
+      "offset": 1640,
       "length": 29,
       "value": "\"purpose_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1725,
+      "offset": 1730,
       "length": 22,
       "value": "\"specialFeatureOptins\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1803,
+      "offset": 1808,
       "length": 20,
       "value": "\"publisher_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1873,
+      "offset": 1878,
       "length": 31,
       "value": "\"publisher_legitimateInterests\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1967,
+      "offset": 1972,
       "length": 34,
       "value": "\"publisher_customPurpose_consents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/TranscendConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2068,
+      "offset": 2073,
       "length": 45,
       "value": "\"publisher_customPurpose_legitimateInterests\""
     },
@@ -9146,9 +9738,37 @@
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/BackEndWebView.swift",
       "kind": "StringLiteral",
-      "offset": 141,
+      "offset": 245,
       "length": 14,
       "value": "\"Transcend.BackEndWebView\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Models\/TranscendCoreConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 937,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Models\/TranscendCoreConfig.swift",
+      "kind": "Dictionary",
+      "offset": 981,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Models\/TranscendCoreConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 1002,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Models\/TranscendCoreConfig.swift",
+      "kind": "Array",
+      "offset": 1030,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/consent-manager-ios-library\/consent-manager-ios-library\/Transcend\/Constants\/IABConstants.swift",

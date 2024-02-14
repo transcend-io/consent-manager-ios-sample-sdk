@@ -16,12 +16,14 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
+    let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
 
     var body: some View {
-        let onCloseListener: ((Result<Void, Error>) -> Void) = { result in
+        let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
             switch result {
-            case .success:
+            case .success(let consentData):
                 self.showingPopover = false
+                print("Onclose:: \(consentData.purposes)")
             case .failure(let error):
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
@@ -113,10 +115,10 @@ struct ContentView: View {
                             }
                             .sheet(isPresented: $showingPopover) {
                                 // Note: Belongs to Managed Consent Database demo Org
-                                TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js",
-                                                   isInit: false, onCloseListener: onCloseListener)
+                                // UI View init
+                                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, onCloseListener: onCloseListener)
                             }
-                            
+
                         }
                         .padding()
                         .padding(.vertical)

@@ -1,16 +1,16 @@
 PODS:
-  - Transcend (1.0.6)
+  - Transcend (1.1.0)
 
 DEPENDENCIES:
-  - Transcend (= 1.0.6)
+  - Transcend (= 1.1.0)
 
 SPEC REPOS:
   trunk:
     - Transcend
 
 SPEC CHECKSUMS:
-  Transcend: 5e7dd892941568ba9f1159822d9f0bbb408cbb2c
+  Transcend: 6b0760ae14abec1d65b4c55ec8d6f96794abbcc1
 
-PODFILE CHECKSUM: 4ecd3d2d5904de42baf79e91e35a12953d022911
+PODFILE CHECKSUM: 193242b8f26f4eb535b6dc8cf871713cbd206c63
 
 COCOAPODS: 1.13.0
