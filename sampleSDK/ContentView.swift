@@ -16,13 +16,13 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
-    let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", syncDomains: ["https://eshopit.co/"], mobileAppId: "NYT")
 
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
+            self.showingPopover = false
             switch result {
             case .success(let consentData):
-                self.showingPopover = false
                 print("Onclose:: \(consentData.purposes)")
             case .failure(let error):
                 print("Error during web view navigation: \(error.localizedDescription)")
@@ -116,7 +116,7 @@ struct ContentView: View {
                             .sheet(isPresented: $showingPopover) {
                                 // Note: Belongs to Managed Consent Database demo Org
                                 // UI View init
-                                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, onCloseListener: onCloseListener)
+                                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
                             }
 
                         }

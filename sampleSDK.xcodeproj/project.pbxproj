@@ -10,6 +10,8 @@
 		3F50A5279CA15C9FF3ABB089 /* Pods_sampleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1F63116CEEC93F16D47E2A /* Pods_sampleSDKTests.framework */; };
 		44D1F66FCBC47D3296E7FA1D /* Pods_sampleSDK_sampleSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5015913F4B1C7D38DBAA9133 /* Pods_sampleSDK_sampleSDKUITests.framework */; };
 		973A0E9DE40969CA8CB3EC79 /* Pods_sampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58253F59DC009CA3C9B27F /* Pods_sampleSDK.framework */; };
+		B0B6DF842BBC7D3E00FD02DD /* Transcend.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EA011D2B77051C00F174F4 /* Transcend.xcframework */; };
+		B0B6DF852BBC7D3E00FD02DD /* Transcend.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0EA011D2B77051C00F174F4 /* Transcend.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0E36F512B51B5D500080764 /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F502B51B5D500080764 /* sampleSDKApp.swift */; };
 		B0E36F532B51B5D500080764 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F522B51B5D500080764 /* ContentView.swift */; };
 		B0E36F552B51B5D500080764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E36F542B51B5D500080764 /* Assets.xcassets */; };
@@ -36,6 +38,20 @@
 			remoteInfo = sampleSDK;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B0B6DF862BBC7D3E00FD02DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0B6DF852BBC7D3E00FD02DD /* Transcend.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E1F63116CEEC93F16D47E2A /* Pods_sampleSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B6DF842BBC7D3E00FD02DD /* Transcend.xcframework in Frameworks */,
 				973A0E9DE40969CA8CB3EC79 /* Pods_sampleSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +200,8 @@
 				B0E36F492B51B5D500080764 /* Sources */,
 				B0E36F4A2B51B5D500080764 /* Frameworks */,
 				B0E36F4B2B51B5D500080764 /* Resources */,
-				8A9A0A10A7870DF90A41CAEA /* [CP] Embed Pods Frameworks */,
+				B0B6DF862BBC7D3E00FD02DD /* Embed Frameworks */,
+				C84EFFEA0E2C317F31A8C7E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +239,7 @@
 				B0E36F632B51B5D600080764 /* Sources */,
 				B0E36F642B51B5D600080764 /* Frameworks */,
 				B0E36F652B51B5D600080764 /* Resources */,
-				171222B6AF06454B805D2C37 /* [CP] Embed Pods Frameworks */,
+				53393FC103EAC3F7C5519EDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,7 +343,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		171222B6AF06454B805D2C37 /* [CP] Embed Pods Frameworks */ = {
+		53393FC103EAC3F7C5519EDE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,7 +382,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A9A0A10A7870DF90A41CAEA /* [CP] Embed Pods Frameworks */ = {
+		C84EFFEA0E2C317F31A8C7E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

@@ -83,7 +83,7 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", syncDomains: ["https://eshopit.co/"], mobileAppId: "NYT")
 
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
@@ -118,7 +118,7 @@ struct FloatingButton: View {
             .sheet(isPresented: $showingPopover) {
                 // Note: Belongs to Managed Consent Database demo Org
                 // Initialized UI View
-                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, onCloseListener: onCloseListener)
+                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
         }
