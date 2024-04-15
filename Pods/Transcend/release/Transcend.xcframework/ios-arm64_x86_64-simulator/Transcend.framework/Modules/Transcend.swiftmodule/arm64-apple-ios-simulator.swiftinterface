@@ -11,6 +11,12 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+@_hasMissingDesignatedInitializers public class TelemetryServiceHelper {
+  public static func saveTelemetryRequest(request: Transcend.TelemetryRequest, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public static func getTelemetryRequests(completion: @escaping ([Transcend.TelemetryRequests]?, Swift.Error?) -> Swift.Void)
+  public static func deleteTelemetryRequest(withUUID uuid: Foundation.UUID, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class TranscendDataManager {
   public static let shared: Transcend.TranscendDataManager
   final public let container: CoreData.NSPersistentContainer
@@ -76,10 +82,14 @@ public struct TranscendWebViewWrapper : SwiftUI.UIViewRepresentable {
   public static func fetchSDKPurposeMap(baseUrl: Swift.String, completion: @escaping (Swift.Result<Transcend.SDKPurposeMap, Swift.Error>) -> Swift.Void)
   @objc deinit
 }
+public struct NativeConfig : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class TranscendServiceHelper {
-  public static func saveSDKPurposeMap(sdkPurposeMap: Transcend.SDKPurposeMap)
-  public static func isSDKPurposeMapValid() -> Swift.Bool
-  public static func getSDKPurposeMap() -> Transcend.SDKPurposeMap?
+  public static func saveSDKPurposeMap(sdkPurposeMap: Transcend.SDKPurposeMap, completion: @escaping (Swift.Error?) -> Swift.Void)
+  public static func isSDKPurposeMapValid(completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  public static func getSDKPurposeMap(completion: @escaping (Transcend.SDKPurposeMap?, Swift.Error?) -> Swift.Void)
   @objc deinit
 }
 public enum ConsentStatus {
@@ -94,11 +104,25 @@ public enum ConsentStatus {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class TelemetryRequest : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class SDKPurposeMap : Swift.Codable {
   public func isSDKAllowed(consentDetails: Transcend.TrackingConsentDetails, serviceId: Swift.String, tcfAllowed: Swift.Bool, regimePurposes: Swift.Set<Swift.String>) -> Transcend.ConsentStatus
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+public enum TelemetryRequestType {
+  case INITIAL_SITE_SESSION
+  case CONSENT_CHANGE
+  public static func == (a: Transcend.TelemetryRequestType, b: Transcend.TelemetryRequestType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public struct TrackingConsentDetails : Swift.Codable {
   public var purposes: [Swift.String : Transcend.Value]
@@ -143,8 +167,10 @@ public class WebAppInterface {
   @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration, transcendCoreConfig: Transcend.TranscendCoreConfig, didFinishNavigation: ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)? = nil, onCloseListenerV1: ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)? = nil, onCloseListener: ((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) required public init?(coder: Foundation.NSCoder, transcendCoreConfig: Transcend.TranscendCoreConfig, didFinishNavigation: ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)? = nil, onCloseListenerV1: ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)? = nil, onCloseListener: ((Swift.Result<Transcend.TrackingConsentDetails, Swift.Error>) -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @_Concurrency.MainActor(unsafe) public static func createOrGetInstance(frame: CoreFoundation.CGRect, configuration: WebKit.WKWebViewConfiguration, transcendCoreConfig: Transcend.TranscendCoreConfig, didFinishNavigation: ((Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)? = nil) -> Transcend.TranscendWebView!
+  @_Concurrency.MainActor(unsafe) public func handleErrors(errorDetails: Swift.String)
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class BackEndWebView : WebKit.WKWebView, WebKit.WKNavigationDelegate {
@@ -160,7 +186,7 @@ public class WebAppInterface {
   @objc deinit
 }
 public struct TranscendCoreConfig {
-  public init(transcendConsentUrl: Swift.String, destroyOnClose: Swift.Bool = true, defaultAttributes: [Swift.String : Swift.String] = [:], token: Swift.String = "", syncDomains: [Swift.String] = [])
+  public init(transcendConsentUrl: Swift.String, destroyOnClose: Swift.Bool = true, defaultAttributes: [Swift.String : Swift.String] = [:], token: Swift.String = "", syncDomains: [Swift.String] = [], autoShowUI: Swift.Bool = false, mobileAppId: Swift.String = "")
   public func getDefaultAttributesAsString() -> Swift.String
 }
 public enum JSONValue : Swift.Codable {
@@ -193,6 +219,31 @@ public enum JSONValue : Swift.Codable {
   public static let IAB_TCF_PUBLISHER_CUSTOM_PURPOSES_LEGITIMATE_INTERESTS: Swift.String
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class TelemetryConfig : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class TelemetryService {
+  public static func flushTelemetryRequest(mobileAppId: Swift.String, type: Transcend.TelemetryRequestType, config: Transcend.TelemetryConfig)
+  public static func flushTelemetryRequestsFromDBAsync()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(TelemetryRequests) public class TelemetryRequests : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Transcend.TelemetryRequests {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Transcend.TelemetryRequests>
+  @objc @NSManaged dynamic public var id: Foundation.UUID? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var requestData: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+}
 @_inheritsConvenienceInitializers @objc(TranscendSDKPurposeMap) public class TranscendSDKPurposeMap : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
@@ -210,3 +261,5 @@ extension Transcend.TranscendSDKPurposeMap {
 }
 extension Transcend.ConsentStatus : Swift.Equatable {}
 extension Transcend.ConsentStatus : Swift.Hashable {}
+extension Transcend.TelemetryRequestType : Swift.Equatable {}
+extension Transcend.TelemetryRequestType : Swift.Hashable {}

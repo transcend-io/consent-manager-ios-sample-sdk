@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Transcend-Swift.h</key>
 		<data>
-		LePADpXMyW8SpAqK6TJQuHXIVt4=
+		4kXYx+2D6gYBSU0feQfv1nwTKvI=
 		</data>
 		<key>Headers/Transcend.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aScUL93EOa3ZcJwGmqUXJ7oAAr4=
+		cpST+ECzujp6y1LcXY+7BAbfXXM=
 		</data>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		VRH6cEMgtnZSXWu9QGkBJCAd0+I=
+		OFbBLcXDtFSqS9lAZ+bhpZMPUBg=
 		</data>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BCZkofncZdAu7KROeFtnCTsmvyw=
+		xUj+0BdFxSOp6vOEDEyu43j9Tz8=
 		</data>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PxfnNYbCP1V0SVCUPKVsUT0TybE=
+		4fPz+0IEziPZ5OPEgW9h1uWBDfs=
 		</data>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BCZkofncZdAu7KROeFtnCTsmvyw=
+		xUj+0BdFxSOp6vOEDEyu43j9Tz8=
 		</data>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7cgrNFlf88DgIjSsvORBAtd6B3Q=
+		+yVkxB1Qwpqy/vFVUT3oCDZ7Ma4=
 		</data>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		VRH6cEMgtnZSXWu9QGkBJCAd0+I=
+		OFbBLcXDtFSqS9lAZ+bhpZMPUBg=
 		</data>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		blzvC2JpUTpKak27k4DtAPTz96A=
+		JwSe6LI8yi1XHNISGUjfgqI9LvA=
 		</data>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ud+C/oY4NfbKoa1nOpHaCS9XtPM=
+		dLeyeMuh0fSHQYZl7S4clJF+pYo=
 		</data>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		blzvC2JpUTpKak27k4DtAPTz96A=
+		JwSe6LI8yi1XHNISGUjfgqI9LvA=
 		</data>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5kFKSK3hywMCf65wn//yQSM9+GE=
+		KsxA09yUz9bk0ZKc9CF6AhLbxbY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>TranscendModel.momd/TranscendModel.mom</key>
 		<data>
-		2MXHAF8qwDFkp+I90bYoFx5fuZQ=
+		m6WnjvRZsaqu5yR0KcWUS/TUrVc=
 		</data>
 		<key>TranscendModel.momd/VersionInfo.plist</key>
 		<data>
-		UOkIkRt3959VDGzo3Xa/e+5SlB0=
+		mbT2HC+CoztAudgzF9Qc7IxkCzg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PHxWHPhbxnBYmiKOEjafYoh3ZM0fL8G5t9sw0oOwMwM=
+			2NxRQ3hfcOy++8w4V7GhwmQ2+a7ipV2P4pVj4dYsRj8=
 			</data>
 		</dict>
 		<key>Headers/Transcend.h</key>
@@ -89,70 +89,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UY6QNdfPfxHFzZMLtarXTLkB69KcI+TbYgjWYH/7J3k=
+			FTFaGSjjZG/VY9J4Wm+KGmK0ZqRNcah/0OYqcU80Y+E=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f0CoGtGSzizoiaQcOYR0ySGmYlfBkFIeM1rR0eWaXKA=
+			QaZhyWdfgtJi++9Y/Ov47iO8Hm8Poh8TG63aKlikg5s=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FCJyclFdZvcxNtFgrJph26NrtGQJ63mEXA7bY0/9hsM=
+			nCTEcJft2hqQwmY2X6O88MGQArqXsKAXqOv6HtJZpCE=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f0CoGtGSzizoiaQcOYR0ySGmYlfBkFIeM1rR0eWaXKA=
+			QaZhyWdfgtJi++9Y/Ov47iO8Hm8Poh8TG63aKlikg5s=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cbtlDRD3ylpbFqJZlizU4UwgclL5hMVYebR8QglKjY0=
+			o35NQvHfeYPnuJ8s5HfDvHdatGsgitC271/hjofTWz4=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UY6QNdfPfxHFzZMLtarXTLkB69KcI+TbYgjWYH/7J3k=
+			FTFaGSjjZG/VY9J4Wm+KGmK0ZqRNcah/0OYqcU80Y+E=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iwobSSQZ64SezTJWsjtB9mUMcaUabz+gNdDgdjlOegE=
+			HD1MAnazv7bPaG1L13sYQ6BB+LYa/Vpl4n7joDGUSJY=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TXkvGZHtsOLqlmgIE2FYhkUkSzWVCngl936jds9W2d4=
+			iv0k4ZntIJZunGu7zSSqitqF1ckJIIhibtCOTSBcgjI=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iwobSSQZ64SezTJWsjtB9mUMcaUabz+gNdDgdjlOegE=
+			HD1MAnazv7bPaG1L13sYQ6BB+LYa/Vpl4n7joDGUSJY=
 			</data>
 		</dict>
 		<key>Modules/Transcend.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MoKVLwBeuJaX1De4mf8P5ILtTXg5f0yRHtDCMhTVc30=
+			iZ6URqpPKeWLX/I45E4aHjCL8EwGGQVKGHZnkwMJVt4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -166,14 +166,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jPlHP+59g6PQMSa8xJfs7/hGt1Ln1WBRbtdDOIGjDaM=
+			l4pqdC+jllKZzkvelX+4rYmBHboBow1EHwHiv9Yww0w=
 			</data>
 		</dict>
 		<key>TranscendModel.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A2wPQoC31StNAdF3lNeptVN2qnJFFbQnY1e7LMWRykg=
+			eERyQID+cHANjPi9vJ6DfQPkAFgWgPRzhArBWmVM/3M=
 			</data>
 		</dict>
 	</dict>
