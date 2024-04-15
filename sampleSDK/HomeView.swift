@@ -19,10 +19,10 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }
                 .tag(1)
-
-            myWebView(url: URL(string: "https://eshopit.co/")!)
+            
+            myWebView(url: URL(string: "https://docs.transcend.io/docs/consent-management/mobile-consent/ios/api")!)
                 .tabItem {
-                    Label("EshopIt", systemImage: "storefront")
+                    Label("Documentation", systemImage: "storefront")
                 }
                 .tag(2)
         }
@@ -39,7 +39,7 @@ struct HomeView: View {
                     }
                 }
             })
-
+            
             TranscendWebView.transcendAPI.webAppInterface.getConsent(completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
@@ -59,7 +59,7 @@ struct HomeView: View {
                     }
                 }
             })
-
+            
             TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId: "datadog-ios", completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
@@ -75,7 +75,7 @@ struct HomeView: View {
                 showingPopover = true
             }, showingPopover: $showingPopover)
         }
-
+        
     }
 }
 
@@ -83,8 +83,8 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
-
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+    
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
             switch result {
@@ -95,30 +95,30 @@ struct FloatingButton: View {
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
         }
-
-            Button(action: action) {
-                Image("transcendLogo")
-                    .resizable()
-                    .background(.white)
-                    .frame(width: 60, height: 60)
-                    .scaledToFit()
-                    .cornerRadius(30)
-            }
-            .offset(buttonOffset)
-            .frame(alignment: .bottom)
-            .gesture(
-                DragGesture()
-                    .onEnded { value in
-                        withAnimation {
-                            print(value)
-                            buttonOffset = CGSize(width: value.location.x, height: value.location.y)
-                        }
+        
+        Button(action: action) {
+            Image("transcendLogo")
+                .resizable()
+                .background(.white)
+                .frame(width: 60, height: 60)
+                .scaledToFit()
+                .cornerRadius(30)
+        }
+        .offset(buttonOffset)
+        .frame(alignment: .bottom)
+        .gesture(
+            DragGesture()
+                .onEnded { value in
+                    withAnimation {
+                        print(value)
+                        buttonOffset = CGSize(width: value.location.x, height: value.location.y)
                     }
-            )
-            .sheet(isPresented: $showingPopover) {
-                // Note: Belongs to Managed Consent Database demo Org
-                // Initialized UI View
-                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, onCloseListener: onCloseListener)
+                }
+        )
+        .sheet(isPresented: $showingPopover) {
+            // Note: Belongs to Managed Consent Database demo Org
+            // Initialized UI View
+            TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
         }
@@ -128,12 +128,12 @@ struct FloatingButton: View {
 public struct myWebView: UIViewRepresentable {
     let webView = WKWebView()
     var url: URL
-
+    
     public init(url: URL) {
         self.url = url
         self.webView.isInspectable = true
     }
-
+    
     public func makeUIView(context: Context) -> WKWebView {
         return self.webView
     }
@@ -141,7 +141,7 @@ public struct myWebView: UIViewRepresentable {
         let request = URLRequest(url: url)
         uiView.load(request)
     }
-
+    
 }
 
 #Preview {

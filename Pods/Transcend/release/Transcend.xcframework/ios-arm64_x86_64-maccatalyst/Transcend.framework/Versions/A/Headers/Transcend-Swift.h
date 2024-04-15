@@ -271,13 +271,27 @@ SWIFT_CLASS("_TtC9Transcend14BackEndWebView")
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
+SWIFT_CLASS_NAMED("TelemetryRequests")
+@interface TelemetryRequests : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class NSUUID;
+@class NSData;
+
+@interface TelemetryRequests (SWIFT_EXTENSION(Transcend))
+@property (nonatomic, copy) NSUUID * _Nullable id;
+@property (nonatomic, copy) NSData * _Nullable requestData;
+@end
+
+
 SWIFT_CLASS_NAMED("TranscendSDKPurposeMap")
 @interface TranscendSDKPurposeMap : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-@class NSData;
 @class NSDate;
 
 @interface TranscendSDKPurposeMap (SWIFT_EXTENSION(Transcend))
@@ -285,6 +299,7 @@ SWIFT_CLASS_NAMED("TranscendSDKPurposeMap")
 @property (nonatomic, copy) NSDate * _Nullable timestamp;
 @end
 
+@class WKNavigationAction;
 
 SWIFT_CLASS("_TtC9Transcend16TranscendWebView")
 @interface TranscendWebView : WKWebView <WKNavigationDelegate>
@@ -297,6 +312,14 @@ SWIFT_CLASS("_TtC9Transcend16TranscendWebView")
 /// \param navigation The navigation object that completed.
 ///
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+/// A method called when the web view needs to decide whether to allow or cancel a navigation.
+/// \param webView The web view that initiated the navigation.
+///
+/// \param navigationAction Information about the navigation action.
+///
+/// \param decisionHandler A closure to call with your decision.
+///
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 /// Notifies that the web view failed navigating to a new webpage.
 /// This method is called when the web view fails to navigation to a new webpage.
 /// \param webView The web view that finished navigation.
@@ -590,13 +613,27 @@ SWIFT_CLASS("_TtC9Transcend14BackEndWebView")
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
+SWIFT_CLASS_NAMED("TelemetryRequests")
+@interface TelemetryRequests : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class NSUUID;
+@class NSData;
+
+@interface TelemetryRequests (SWIFT_EXTENSION(Transcend))
+@property (nonatomic, copy) NSUUID * _Nullable id;
+@property (nonatomic, copy) NSData * _Nullable requestData;
+@end
+
+
 SWIFT_CLASS_NAMED("TranscendSDKPurposeMap")
 @interface TranscendSDKPurposeMap : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-@class NSData;
 @class NSDate;
 
 @interface TranscendSDKPurposeMap (SWIFT_EXTENSION(Transcend))
@@ -604,6 +641,7 @@ SWIFT_CLASS_NAMED("TranscendSDKPurposeMap")
 @property (nonatomic, copy) NSDate * _Nullable timestamp;
 @end
 
+@class WKNavigationAction;
 
 SWIFT_CLASS("_TtC9Transcend16TranscendWebView")
 @interface TranscendWebView : WKWebView <WKNavigationDelegate>
@@ -616,6 +654,14 @@ SWIFT_CLASS("_TtC9Transcend16TranscendWebView")
 /// \param navigation The navigation object that completed.
 ///
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+/// A method called when the web view needs to decide whether to allow or cancel a navigation.
+/// \param webView The web view that initiated the navigation.
+///
+/// \param navigationAction Information about the navigation action.
+///
+/// \param decisionHandler A closure to call with your decision.
+///
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 /// Notifies that the web view failed navigating to a new webpage.
 /// This method is called when the web view fails to navigation to a new webpage.
 /// \param webView The web view that finished navigation.

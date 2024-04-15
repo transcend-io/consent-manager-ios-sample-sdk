@@ -10,8 +10,9 @@ import Transcend
 @main
 struct sampleSDKApp: App {
     @State var canUseAPI: Bool = false
-
+    
     var body: some Scene {
+        
         let didFinishNavigation: ((Result<Void, Error>) -> Void) = { result in
             switch result {
             case .success:
@@ -20,29 +21,29 @@ struct sampleSDKApp: App {
                 print("Error during web view navigation: \(error.localizedDescription)")
             }
         }
-
+        
         // Simple config object
         // expects only your airgap bundle url
-         let transcendCoreConfigSimple: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js")
-
+        let transcendCoreConfigSimple: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js")
+        
         // If you have any webView that you would open on this application
         // and need to carry forward the consent state the use syncDomain
-        // In the line below, we have include sync domain "https://eshopit.co/"
+        // In the line below, we have include sync domain "https://example.com/"
         // Which might, at some point, in this application be opened as a webview
         // and you might require consent data to passed on to this webview
-         let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", syncDomains: ["https://eshopit.co/"])
-
+        let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+        
         // If you want to use preference store to sync logged In users data
-        let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/63b35d96-a6db-436f-a1cf-ea93ae4be24e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
-
+        let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
+        
         WindowGroup {
             ContentView(canUseAPI: $canUseAPI)
             // Note: Belongs to Managed Consent Database demo Org
             // Backend API instance init
             // Will not show any UI when didFinishNavigation is attached
             // assumes it to be a backend instance
-            TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, didFinishNavigation: didFinishNavigation)
+            TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, didFinishNavigation: didFinishNavigation)
         }
     }
-
+    
 }
