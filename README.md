@@ -44,14 +44,16 @@ Please consult the documentation [here](https://docs.transcend.io/docs/consent-m
 
 ### Initialization of API instance 
 
-The referrence for API instance in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/sampleSDKApp.swift#L45)
-- Note: This will not render Consent Banner on UI
+A reference for the API instance in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/sampleSDKApp.swift#L45)
+- Note: This will not render Consent Banner on UI but would allow you to call API's such as `getRegimes()` which is listed below.
 ```
     import SwiftUI
     import Transcend
     
     // Usage
     // completionHandler
+    let BUNDLE_ID = "your-airgap-bundle-id"
+    let MOBILE_APP_ID = "your-mobile-app-id"
     let didFinishNavigation: ((Result<Void, Error>) -> Void) = { result in
       switch result {
         case .success():
@@ -62,7 +64,7 @@ The referrence for API instance in this repository can be found [here](https://g
     }
     // Create TranscendCoreConfig
     let simpleCoreConfig: TranscendCoreConfig = TranscendCoreConfig(
-      transcendConsentUrl: "https://transcend-cdn.com/cm/{Bundle_Id}/airgap.js", mobileAppId: "com.example.ios")
+      transcendConsentUrl: "https://transcend-cdn.com/cm/\(BUNDLE_ID)/airgap.js", mobileAppId: MOBILE_APP_ID)
     
     TranscendWebViewUI(transcendCoreConfig: simpleCoreConfig, didFinishNavigation: didFinishNavigation)
 ```
@@ -70,7 +72,7 @@ The referrence for API instance in this repository can be found [here](https://g
 
 ### API Usage
 
-The referrence for API Usage in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L33).
+A reference for the API Usage in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L33).
 - Full list of support APIs are listed [here](https://docs.transcend.io/docs/consent-management/mobile-consent/ios/api#1.0.9:definitions-and-usage-of-the-api).
 ```
 // Usage
@@ -89,14 +91,16 @@ TranscendWebView.transcendAPI.webAppInterface.getRegimes(completionHandler: { re
 ```
 
 ### Show Consent banner
-The referrence to show consent banner in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L121)
+A reference to show the consent banner in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L121)
 
 ```
 import Transcend
 
 struct ContentView: View {
+    let BUNDLE_ID = "your-airgap-bundle-id"
+    let MOBILE_APP_ID = "your-mobile-app-id"
     let simpleCoreConfig: TranscendCoreConfig = TranscendCoreConfig(
-      transcendConsentUrl: "https://transcend-cdn.com/cm/{Bundle_Id}/airgap.js", mobileAppId: "com.example.ios")
+      transcendConsentUrl: "https://transcend-cdn.com/cm/\(BUNDLE_ID)/airgap.js", mobileAppId: MOBILE_APP_ID)
 
     var body: some View {
       // Sample Use of TranscendWebViewUI
