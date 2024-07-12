@@ -10,9 +10,7 @@ The framework contains the majority of the logic for saving TCF-related data and
 
 ### Step 1: Include Our Framework
 
-- The package can be added Manually or using Cocoapods.
-
-Note: Just a heads up, the Swift Package Manager approach isn't ready for use just yet. We'll be rolling it out soon.
+- You can integrate the Framework into your application using one of the following methods:
 
 ### Manual Steps
 
@@ -34,6 +32,12 @@ Note: Just a heads up, the Swift Package Manager approach isn't ready for use ju
 - Add the dependency on your project's Podfile
     - `pod 'Transcend'`
 - Run `pod install` to fetch the Transcend Framework.
+
+### Using Swift Package Manager
+
+```
+    https://github.com/transcend-io/Transcend-spm-sdk.git
+```
 
 ### Step 2: Use the custom Transcend WebView (Share the AirgapUrl)
 
