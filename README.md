@@ -12,7 +12,7 @@ The framework contains the majority of the logic for saving TCF-related data and
 
 - You can integrate the Framework into your application using one of the following methods:
 
-### Manual Steps
+#### Manual Steps
 
 - Download the most recent version of our framework for Xcode from links below, and extract the file. Make sure your Xcode version ≥ 12.
 [Transcend.xcframework.tar.gz](https://github.com/transcend-io/consent-manager-ios-sample-sdk/files/13526419/Transcend.xcframework.tar.gz)
@@ -27,13 +27,13 @@ The framework contains the majority of the logic for saving TCF-related data and
 
 ![image](https://github.com/transcend-io/consent-manager-ios-sample-sdk/assets/23165664/d007cf9b-8c53-4f49-a2d1-f5a4dab67494)
 
-### Using Cocoapods
+#### Using Cocoapods
 
 - Add the dependency on your project's Podfile
     - `pod 'Transcend'`
 - Run `pod install` to fetch the Transcend Framework.
 
-### Using Swift Package Manager
+#### Using Swift Package Manager
 
 ```
     https://github.com/transcend-io/Transcend-spm-sdk.git
