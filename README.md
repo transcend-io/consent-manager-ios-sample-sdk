@@ -72,7 +72,7 @@ A reference for the API instance in this repository can be found [here](https://
 
 ### API Usage
 
-A reference for the API Usage in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L33).
+A reference for the API usage in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L33).
 - Full list of support APIs are listed [here](https://docs.transcend.io/docs/consent-management/mobile-consent/ios/api#1.0.9:definitions-and-usage-of-the-api).
 ```
 // Usage
