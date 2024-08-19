@@ -8,11 +8,9 @@ We provide an IOS xcframework that includes release builds(archives) for the fol
 
 The framework contains the majority of the logic for saving TCF-related data and interacting with the organization-specific mobile/bridge.js which handles displaying the UI and passing information between the WebView and the SDK. Below is a list of steps necessary to utilize the Transcend WebView library:
 
-### Step 1: Include Our Framework
+## Include Our Framework
 
-- The package can be added Manually or using Cocoapods.
-
-Note: Just a heads up, the Swift Package Manager approach isn't ready for use just yet. We'll be rolling it out soon.
+- You can integrate the Framework into your application using one of the following methods:
 
 ### Manual Steps
 
@@ -35,104 +33,96 @@ Note: Just a heads up, the Swift Package Manager approach isn't ready for use ju
     - `pod 'Transcend'`
 - Run `pod install` to fetch the Transcend Framework.
 
-### Step 2: Use the custom Transcend WebView (Share the AirgapUrl)
+### Using Swift Package Manager
 
-- Application developers collecting consent with our WebView have the flexibility to employ this view in various contexts based on their application's logic. They can integrate this view during their application's startup view , or in response to a button click event. To use Transcend’s webView in SwiftUI the following changes are required:
-    
-    ### Documentation for TranscendConsentWebViewUI
-    
-    ```swift
-    // For iOS.V>=13.0 we expose TranscendConsentWebViewUI 
-    @available(iOS 13.0, *)
-    public struct TranscendWebViewUI : View {
-    
-        public var transcendConsentUrl: String
-    
-        public init(transcendConsentUrl: String)
-    
-        /// The content and behavior of the view.
-        ///
-        /// When you implement a custom view, you must implement a computed
-        /// `body` property to provide the content for your view. Return a view
-        /// that's composed of built-in views that SwiftUI provides, plus other
-        /// composite views that you've already defined:
-        ///
-        ///     struct MyView: View {
-        ///         var body: some View {
-        ///             Text("Hello, World!")
-        ///         }
-        ///     }
-        ///
-        /// For more information about composing views and a view hierarchy,
-        /// see <doc:Declaring-a-Custom-View>.
-        @MainActor public var body: some View { get }
-    
-        /// The type of view representing the body of this view.
-        ///
-        /// When you create a custom view, Swift infers this type from your
-        /// implementation of the required ``View/body-swift.property`` property.
-        public typealias Body = some View
-    }
-    ```
-    
-    ### Usage of TransendConsentWebViewUI
-    
-    ```swift
+```
+    https://github.com/transcend-io/Transcend-spm-sdk.git
+```
+
+## Usage
+Please consult the documentation [here](https://docs.transcend.io/docs/consent-management/mobile-consent/ios) for more details.
+
+### Initialization of API instance 
+
+A reference for the API instance in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/sampleSDKApp.swift#L45)
+- Note: This will not render Consent Banner on UI but would allow you to call API's such as `getRegimes()` which is listed below.
+```
+    import SwiftUI
     import Transcend
     
-    struct ContentView: View {
-        var body: some View {
-          // Sample Use of TranscendWebViewUI
-          Button(action: {
-              showingPopover = true
-          })
-          {
-              Image("google")
-                  .font(.system(size: 20))
-              
-          }
-          .popover(isPresented: $showingPopover) {
-              TranscendWebViewUI(transcendConsentUrl: "https://transcend-cdn.com/cm/a3b53de6-5a46-427a-8fa4-077e4c015f93/airgap.js")
-                  .foregroundColor(Color.transcendDefault)
-                  .padding()
-          }
-        }
-                            
+    // Usage
+    // completionHandler
+    let BUNDLE_ID = "your-airgap-bundle-id"
+    let MOBILE_APP_ID = "your-mobile-app-id"
+    let didFinishNavigation: ((Result<Void, Error>) -> Void) = { result in
+      switch result {
+        case .success():
+          // Your logic goes here
+        case .failure(let error):
+          print("Error during web view navigation: \(error.localizedDescription)")
       }
     }
+    // Create TranscendCoreConfig
+    let simpleCoreConfig: TranscendCoreConfig = TranscendCoreConfig(
+      transcendConsentUrl: "https://transcend-cdn.com/cm/\(BUNDLE_ID)/airgap.js", mobileAppId: MOBILE_APP_ID)
     
-    #Preview {
-        ContentView()
+    TranscendWebViewUI(transcendCoreConfig: simpleCoreConfig, didFinishNavigation: didFinishNavigation)
+```
+
+
+### API Usage
+
+A reference for the API usage in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L33).
+- Full list of support APIs are listed [here](https://docs.transcend.io/docs/consent-management/mobile-consent/ios/api#1.0.9:definitions-and-usage-of-the-api).
+```
+// Usage
+// Note: can be used only after didFinishNavigation returns .success
+TranscendWebView.transcendAPI.webAppInterface.getRegimes(completionHandler: { result, error in
+  if let error = error {
+    // Your logic goes here
+    print("UI Error : \(error)")
+  } else {
+    // Your logic goes here
+    if result?.contains("us") == true {
+      self.showTranscendWebView = true
     }
-    ```
-    
-    ### Documentation of TranscendWebView
+  }
+})
+```
 
-    ```swift
-    // for iOS.V<13.0 we expose the following TranscendWebView class
-    // that inherits WKWebView, WKNavigationDelegate
-    
-    @MainActor @objc public class TranscendWebView : WKWebView, WKNavigationDelegate {
-    
-        @MainActor public var transcendConsentUrl: String
-    
-        @MainActor public init(frame: CGRect, configuration: WKWebViewConfiguration, transcendConsentUrl: String)
-    
-        @MainActor override dynamic public init(frame: CGRect, configuration: WKWebViewConfiguration)
-    
-        @MainActor required dynamic public init?(coder: NSCoder)
-    
-        @MainActor public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
-    
-        @MainActor public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
+### Show Consent banner
+A reference for displaying the consent banner in this repository can be found [here](https://github.com/transcend-io/consent-manager-ios-sample-sdk/blob/dev/sampleSDK/HomeView.swift#L121)
+
+```
+import Transcend
+
+struct ContentView: View {
+    let BUNDLE_ID = "your-airgap-bundle-id"
+    let MOBILE_APP_ID = "your-mobile-app-id"
+    let simpleCoreConfig: TranscendCoreConfig = TranscendCoreConfig(
+      transcendConsentUrl: "https://transcend-cdn.com/cm/\(BUNDLE_ID)/airgap.js", mobileAppId: MOBILE_APP_ID)
+
+    var body: some View {
+      // Sample Use of TranscendWebViewUI
+      Button(action: {
+          showingPopover = true
+      })
+      {
+          Image("google")
+              .font(.system(size: 20))
+          
+      }
+      .popover(isPresented: $showingPopover) {
+            TranscendWebViewUI(transcendCoreConfig: simpleCoreConfig, didFinishNavigation: didFinishNavigation)
+              .foregroundColor(Color.transcendDefault)
+              .padding()
+      }
     }
-    
-    // Usage would be similar to that of how we use WKWebView but notice that
-    // the init has an extra parameter of transcendConsentUrl 
-    // transcendConsentUrl would require your Organizations Airgap bundle url
-    // Note: transendConsenturl can be found at
-    // https://app.transcend.io/consent-manager/developer-settings/installation
-    ```
+                        
+  }
+}
 
-
-  
+#Preview {
+    ContentView()
+}
+```
