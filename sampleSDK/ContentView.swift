@@ -16,7 +16,8 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
-    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+    let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/0016865d-822d-4574-8235-546152a5b53e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiYlZWaW05TXBqWWRESVVsaFM3dVF2dkhWYkcxMXFIejduZkZrM3l2X3d5ST0iLCJpYXQiOjE3Mzk4MTUzMjZ9.53haOFCAmB4pby1bT5v6Es5ILZH_UyctxZtBkXf6T0gq1icXbfvDn9aG8fwzKI0Y", mobileAppId: "TextNow iOS")
+    
     
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
@@ -116,7 +117,7 @@ struct ContentView: View {
                             .sheet(isPresented: $showingPopover) {
                                 // Note: Belongs to Managed Consent Database demo Org
                                 // UI View init
-                                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
+                                TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, onCloseListener: onCloseListener)
                             }
                             
                         }

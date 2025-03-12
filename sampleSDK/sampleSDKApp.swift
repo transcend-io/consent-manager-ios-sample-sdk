@@ -24,17 +24,17 @@ struct sampleSDKApp: App {
         
         // Simple config object
         // expects only your airgap bundle url
-        let transcendCoreConfigSimple: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js")
+        let transcendCoreConfigSimple: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/0016865d-822d-4574-8235-546152a5b53e/airgap.js",  mobileAppId: "TextNow iOS")
         
         // If you have any webView that you would open on this application
         // and need to carry forward the consent state the use syncDomain
         // In the line below, we have include sync domain "https://example.com/"
         // Which might, at some point, in this application be opened as a webview
         // and you might require consent data to passed on to this webview
-        let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+        let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/0016865d-822d-4574-8235-546152a5b53e/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "TextNow iOS")
         
         // If you want to use preference store to sync logged In users data
-        let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiK3dJWXk2SkdmcGxaUUZMWS9ETnQrTUNRS0dISENWckYiLCJpYXQiOjE3MDY5MTA2ODd9.d4zZoMPtriAPwC0HvJ6BqkOGdG_qcPjmRYNNkN_MfLvZDob1OzQcFUbfKFtFZKix")
+        let transcendCoreConfigWithPrefSync: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm/0016865d-822d-4574-8235-546152a5b53e/airgap.js", token: "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJlbmNyeXB0ZWRJZGVudGlmaWVyIjoiYlZWaW05TXBqWWRESVVsaFM3dVF2dkhWYkcxMXFIejduZkZrM3l2X3d5ST0iLCJpYXQiOjE3Mzk4MTUzMjZ9.53haOFCAmB4pby1bT5v6Es5ILZH_UyctxZtBkXf6T0gq1icXbfvDn9aG8fwzKI0Y", mobileAppId: "TextNow iOS")
         
         WindowGroup {
             ContentView(canUseAPI: $canUseAPI)
@@ -42,7 +42,7 @@ struct sampleSDKApp: App {
             // Backend API instance init
             // Will not show any UI when didFinishNavigation is attached
             // assumes it to be a backend instance
-            TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, didFinishNavigation: didFinishNavigation)
+            TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithPrefSync, didFinishNavigation: didFinishNavigation)
         }
     }
     
