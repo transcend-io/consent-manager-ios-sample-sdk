@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
-    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c45a9cb2-27be-4528-b25a-8696a3ee6852/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "iOS")
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
     
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
