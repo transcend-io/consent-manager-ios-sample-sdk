@@ -22,10 +22,6 @@ struct sampleSDKApp: App {
             }
         }
         
-        // Simple config object
-        // expects only your airgap bundle url
-        let transcendCoreConfigSimple: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js")
-        
         // If you have any webView that you would open on this application
         // and need to carry forward the consent state the use syncDomain
         // In the line below, we have include sync domain "https://example.com/"
