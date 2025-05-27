@@ -10,6 +10,7 @@
 		3F50A5279CA15C9FF3ABB089 /* Pods_sampleSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1F63116CEEC93F16D47E2A /* Pods_sampleSDKTests.framework */; };
 		44D1F66FCBC47D3296E7FA1D /* Pods_sampleSDK_sampleSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5015913F4B1C7D38DBAA9133 /* Pods_sampleSDK_sampleSDKUITests.framework */; };
 		973A0E9DE40969CA8CB3EC79 /* Pods_sampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58253F59DC009CA3C9B27F /* Pods_sampleSDK.framework */; };
+		B07052032DE64D4B002B2AB5 /* Transcend in Frameworks */ = {isa = PBXBuildFile; productRef = B07052022DE64D4B002B2AB5 /* Transcend */; };
 		B0E36F512B51B5D500080764 /* sampleSDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F502B51B5D500080764 /* sampleSDKApp.swift */; };
 		B0E36F532B51B5D500080764 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E36F522B51B5D500080764 /* ContentView.swift */; };
 		B0E36F552B51B5D500080764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E36F542B51B5D500080764 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				973A0E9DE40969CA8CB3EC79 /* Pods_sampleSDK.framework in Frameworks */,
+				B07052032DE64D4B002B2AB5 /* Transcend in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +185,6 @@
 				B0E36F492B51B5D500080764 /* Sources */,
 				B0E36F4A2B51B5D500080764 /* Frameworks */,
 				B0E36F4B2B51B5D500080764 /* Resources */,
-				9A79C1F4EB6CBF3D056DD8A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +222,6 @@
 				B0E36F632B51B5D600080764 /* Sources */,
 				B0E36F642B51B5D600080764 /* Frameworks */,
 				B0E36F652B51B5D600080764 /* Resources */,
-				07C3D7232C64FEBBC70071BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +265,9 @@
 				Base,
 			);
 			mainGroup = B0E36F442B51B5D500080764;
+			packageReferences = (
+				B07052012DE64D4B002B2AB5 /* XCRemoteSwiftPackageReference "Transcend-spm-sdk" */,
+			);
 			productRefGroup = B0E36F4E2B51B5D500080764 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,23 +306,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07C3D7232C64FEBBC70071BB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sampleSDK-sampleSDKUITests/Pods-sampleSDK-sampleSDKUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		11C6BFB917421BA157F9FE11 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,23 +348,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A79C1F4EB6CBF3D056DD8A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sampleSDK/Pods-sampleSDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8CC6394042625E16C6B8B40 /* [CP] Check Pods Manifest.lock */ = {
@@ -742,6 +711,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B07052012DE64D4B002B2AB5 /* XCRemoteSwiftPackageReference "Transcend-spm-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/transcend-io/Transcend-spm-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B07052022DE64D4B002B2AB5 /* Transcend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B07052012DE64D4B002B2AB5 /* XCRemoteSwiftPackageReference "Transcend-spm-sdk" */;
+			productName = Transcend;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0E36F452B51B5D500080764 /* Project object */;
 }
