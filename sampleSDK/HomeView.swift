@@ -60,6 +60,22 @@ struct HomeView: View {
                 }
             })
             
+            TranscendWebView.transcendAPI.webAppInterface.getLoadOptions(completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    print("loadOptions: \(result ?? "")")
+                }
+            })
+
+            TranscendWebView.transcendAPI.webAppInterface.getRegimePurposes(completionHandler: {result, error in
+                if let error = error {
+                    print("UI Error : \(error)")
+                } else {
+                    print("getRegimePurposes: \(result ?? [])")
+                }
+            })
+            
             TranscendWebView.transcendAPI.webAppInterface.getSDKConsentStatus(serviceId: "datadog-ios", completionHandler: {result, error in
                 if let error = error {
                     print("UI Error : \(error)")
