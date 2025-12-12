@@ -127,6 +127,7 @@ struct FloatingButton: View {
                                    isInit: false, onCloseListener: onCloseListener)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
+                .presentationDetents([.height(400)])
         }
     }
 }
