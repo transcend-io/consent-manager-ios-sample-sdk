@@ -117,6 +117,7 @@ struct ContentView: View {
                                 // Note: Belongs to Managed Consent Database demo Org
                                 // UI View init
                                 TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
+                                    .presentationDetents([.height(400)])
                             }
                             
                         }
