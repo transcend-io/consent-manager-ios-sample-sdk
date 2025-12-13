@@ -137,6 +137,7 @@ struct FloatingButton: View {
             TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
                 .foregroundColor(Color.transcendDefault)
                 .padding()
+                .presentationDetents([.height(400)])
         }
     }
 }
