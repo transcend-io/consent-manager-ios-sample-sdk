@@ -99,7 +99,7 @@ struct FloatingButton: View {
     let action: () -> Void
     @State private var buttonOffset: CGSize = CGSize(width: 150, height: 280)
     @Binding public var showingPopover: Bool
-    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/e622c065-89e6-4b3c-b31f-46428a1e7b86/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "RideshareTest", viewState: "AcceptOrRejectAllOrMoreChoices")
     
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in

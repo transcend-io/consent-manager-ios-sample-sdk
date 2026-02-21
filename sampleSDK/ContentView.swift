@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var showingPopover = false
     @State private var isLoggedIn = false
-    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/c7561f1c-7ec9-498c-a401-7219e3b36a8c/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "com.transcend.ios")
+    let transcendCoreConfigWithSyncDomain: TranscendCoreConfig = TranscendCoreConfig(transcendConsentUrl: "https://transcend-cdn.com/cm-test/e622c065-89e6-4b3c-b31f-46428a1e7b86/airgap.js", syncDomains: ["https://example.com/"], mobileAppId: "RideshareTest")
     
     var body: some View {
         let onCloseListener: ((Result<TrackingConsentDetails, Error>) -> Void) = { result in
@@ -117,7 +117,7 @@ struct ContentView: View {
                                 // Note: Belongs to Managed Consent Database demo Org
                                 // UI View init
                                 TranscendWebViewUI(transcendCoreConfig: transcendCoreConfigWithSyncDomain, onCloseListener: onCloseListener)
-                                    .presentationDetents([.height(400)])
+                                    .presentationDetents([.height(450)])
                             }
                             
                         }
